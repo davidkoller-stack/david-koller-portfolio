@@ -1,0 +1,131 @@
+export type Language = "en" | "cs";
+
+export type PortfolioContent = {
+  nav: {
+    brand: string;
+    role: string;
+    items: { label: string; href: string }[];
+    languageLabel: string;
+    downloadCv: string;
+    backToTopLabel: string;
+    toggleMenuLabel: string;
+  };
+  hero: {
+    eyebrow: string;
+    headline: string;
+    highlightedWord: string;
+    subheadline: string;
+    name: string;
+    role: string;
+    domains: string;
+    trajectory: string;
+    primaryCta: string;
+    secondaryCta: string;
+    systemLabel: string;
+    systemCenter: string;
+    systemNodes: string[];
+    scrollLabel: string;
+  };
+  profile: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    cards: { number: string; title: string; descriptor: string; body: string; featured?: boolean }[];
+  };
+  foundations: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    layers: { title: string; body: string; label: string }[];
+    centerLabel: string;
+    centerSubline: string;
+  };
+  operatingSystem: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    steps: { number: string; title: string; body: string; label?: string }[];
+    loopLabel: string;
+  };
+  casesIntro: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    detailLabel: string;
+    selectedLabel: string;
+    viewDetailLabel: string;
+    viewedLabel: string;
+    detailRegionLabel: string;
+    problemSolvedLabel: string;
+    myRoleLabel: string;
+    proofImpactLabel: string;
+    contextLabel: string;
+    challengeLabel: string;
+    strategicBetLabel: string;
+    strategicLinesLabel: string;
+    orchestrationLabel: string;
+    impactLabel: string;
+    proofLabel: string;
+    proofIntro: string;
+  };
+  leadership: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    acceleratorLabel: string;
+  };
+  evidencePlaceholder: {
+    label: string;
+    title: string;
+    body: string;
+    openVideoLabel: string;
+    videoThumbnailLabel: string;
+  };
+  closing: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    statement: string;
+    primaryCta: string;
+    secondaryCta: string;
+    linkedinCta: string;
+  };
+  footer: {
+    location: string;
+    email: string;
+    linkedin: string;
+    cv: string;
+    note: string;
+  };
+};
+
+export type CaseStudy = {
+  id: string;
+  number: string;
+  title: string;
+  shortTitle: string;
+  eyebrow: string;
+  statusLabel: string;
+  tags: string[];
+  summary?: {
+    problemSolved: string;
+    myRole: string;
+    proofImpact: string;
+  };
+  context?: string;
+  challenge?: string;
+  strategicBet?: string;
+  strategicLines?: string[];
+  orchestrationGroups?: {
+    title: string;
+    items: string[];
+  }[];
+  impact?: string[];
+  proofAssets?: {
+    title: string;
+    type: "primary-public" | "secondary-public" | "internal-safe" | "todo";
+    label: string;
+    url?: string;
+    description: string;
+  }[];
+};

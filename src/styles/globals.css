@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core palette: use the strong lime for intentional highlights, never accidental pastel fills. */
+    --color-ink: 17 19 15;
+    --color-paper: 243 241 233;
+    --color-acid: 200 255 46;
+    --color-fog: 217 215 206;
+    font-family: "Inter", Arial, sans-serif;
+    color: rgb(var(--color-ink));
+    background: rgb(var(--color-paper));
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: rgb(var(--color-paper));
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  ::selection {
+    color: rgb(var(--color-ink));
+    background: rgb(var(--color-acid));
+  }
+}
+
+@layer components {
+  .section-pad {
+    @apply py-24 sm:py-32 lg:py-40;
+  }
+
+  .section-eyebrow {
+    @apply text-[12px] font-bold uppercase tracking-[0.16em];
+  }
+
+  .case-label {
+    @apply text-[12px] font-bold uppercase tracking-[0.15em] text-ink/50;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(17, 19, 15, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 19, 15, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+/*
+ * Breakpoint-aware hero composition. Language only provides a small max-width
+ * adjustment; viewport width remains the primary sizing input.
+ */
+.hero-headline {
+  max-width: 100%;
+  font-size: clamp(3.15rem, 13vw, 5rem);
+  line-height: 0.91;
+}
+
+@media (min-width: 640px) {
+  .hero-headline {
+    max-width: 12.5ch;
+    font-size: clamp(4.5rem, 9vw, 7rem);
+    line-height: 0.9;
+  }
+
+  .hero-headline[data-language="cs"] {
+    max-width: 12ch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-headline {
+    max-width: 12.8ch;
+    font-size: clamp(5.1rem, 7vw, 8.15rem);
+    line-height: 0.89;
+  }
+
+  .hero-headline[data-language="cs"] {
+    max-width: 12.2ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
