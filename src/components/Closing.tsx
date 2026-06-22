@@ -14,7 +14,7 @@ export function ProofGallery({
   const visibleEvidence = evidence.filter(
     (item) =>
       (item.type === "youtube" && item.url) ||
-      (item.type === "image" && item.imageSrc),
+      (item.type === "image" && item.image),
   );
   const [featured, ...supporting] = visibleEvidence;
 
@@ -57,7 +57,7 @@ export function ProofGallery({
         </div>
 
         <div className="mt-10 flex justify-end">
-          <ChapterLink href="#skills">{content.nextLabel}</ChapterLink>
+          <ChapterLink href="#how-i-work">{content.nextLabel}</ChapterLink>
         </div>
       </Container>
     </section>
@@ -76,8 +76,8 @@ function ProofCard({
   const imageSources =
     item.type === "youtube" && item.url
       ? getYouTubeThumbnails(item.url)
-      : item.imageSrc
-        ? [item.imageSrc]
+      : item.image
+        ? [item.image]
         : [];
   const card = (
     <>
@@ -120,6 +120,20 @@ function ProofCard({
         <p className="mt-3 text-base leading-[1.55] text-ink/62">
           {item.subtitle}
         </p>
+        {(item.role || item.relatedProject) && (
+          <div className="mt-5 border-t border-ink/10 pt-4">
+            {item.role && (
+              <p className="text-sm font-semibold leading-relaxed text-ink/72">
+                {item.role}
+              </p>
+            )}
+            {item.relatedProject && (
+              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] text-ink/42">
+                {item.relatedProject}
+              </p>
+            )}
+          </div>
+        )}
         {item.type === "youtube" && (
           <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
             {content.openVideoLabel}

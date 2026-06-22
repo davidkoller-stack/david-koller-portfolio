@@ -75,7 +75,7 @@ export function HowIWork({
         </div>
 
         <div className="mt-10 flex justify-end">
-          <ChapterLink href="#evidence" light>
+          <ChapterLink href="#skills" light>
             {content.nextLabel}
           </ChapterLink>
         </div>

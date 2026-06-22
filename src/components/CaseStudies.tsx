@@ -189,7 +189,7 @@ export function CaseStudies({
           ))}
         </div>
         <div className="mt-10 flex justify-end">
-          <ChapterLink href="#how-i-work">{content.nextLabel}</ChapterLink>
+          <ChapterLink href="#evidence">{content.nextLabel}</ChapterLink>
         </div>
       </Container>
     </section>
@@ -205,6 +205,7 @@ function CaseDetail({
 }) {
   const [showMore, setShowMore] = useState(false);
   const hasStrategicLines = Boolean(caseStudy.strategicLines?.length);
+  const hasDelivered = Boolean(caseStudy.delivered?.length);
   const hasExpandedDetail = Boolean(
     caseStudy.context || caseStudy.challenge || hasStrategicLines,
   );
@@ -231,6 +232,22 @@ function CaseDetail({
               body={caseStudy.summary.proofImpact}
               className="md:col-span-2 lg:col-span-1"
             />
+          </div>
+        )}
+
+        {hasDelivered && (
+          <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-6 sm:p-7">
+            <p className="case-label">{content.deliveredLabel}</p>
+            <ul className="mt-5 flex flex-wrap gap-2.5">
+              {caseStudy.delivered?.map((item) => (
+                <li
+                  key={item}
+                  className="rounded-full border border-ink/18 bg-paper px-4 py-2 text-[12px] font-semibold text-ink/72"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 

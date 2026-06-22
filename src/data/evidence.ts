@@ -7,7 +7,9 @@ export type EvidenceItem = {
   category: string;
   type: "youtube" | "image";
   url?: string;
-  imageSrc?: string;
+  image?: string;
+  role?: string;
+  relatedProject?: string;
   description: string;
   status: "public";
 };
@@ -23,6 +25,8 @@ const enEvidence: EvidenceItem[] = [
     description:
       "Public video output showing the ability to turn product or business communication into market-facing content.",
     status: "public",
+    role: "Product communication and production delivery",
+    relatedProject: "Shoptet ecosystem",
   },
   {
     id: "video-shoptet-production-02",
@@ -34,6 +38,8 @@ const enEvidence: EvidenceItem[] = [
     description:
       "Public video output used as evidence of content production and communication delivery.",
     status: "public",
+    role: "Educational format and adoption communication",
+    relatedProject: "Shoptet ecosystem",
   },
   {
     id: "video-shoptet-production-03",
@@ -45,6 +51,8 @@ const enEvidence: EvidenceItem[] = [
     description:
       "Public video output supporting the selected proof layer of the portfolio.",
     status: "public",
+    role: "Customer story and public-facing production",
+    relatedProject: "Customer case study",
   },
 ];
 
@@ -56,6 +64,8 @@ const csEvidence: EvidenceItem[] = [
     category: "Video produkce",
     description:
       "Veřejný video výstup ukazující převod produktové nebo business komunikace do obsahu směrem na trh.",
+    role: "Produktová komunikace a doručení produkce",
+    relatedProject: "Ekosystém Shoptetu",
   },
   {
     ...enEvidence[1],
@@ -64,6 +74,8 @@ const csEvidence: EvidenceItem[] = [
     category: "Video produkce",
     description:
       "Veřejný video výstup jako důkaz produkce obsahu a doručení komunikace.",
+    role: "Edukační formát a komunikace pro adopci",
+    relatedProject: "Ekosystém Shoptetu",
   },
   {
     ...enEvidence[2],
@@ -72,6 +84,8 @@ const csEvidence: EvidenceItem[] = [
     category: "Video produkce",
     description:
       "Veřejný video výstup doplňující vrstvu vybraných důkazů v portfoliu.",
+    role: "Zákaznický příběh a veřejná produkce",
+    relatedProject: "Klientská case study",
   },
 ];
 

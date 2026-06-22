@@ -77,22 +77,35 @@ export const en: PortfolioContent = {
     intro:
       "Selected proof around projects I helped position, market and bring to customers.",
     metrics: [
-      { value: "12,000+", label: "clients", project: "Shoptet Pay" },
+      {
+        value: "12,000+",
+        label: "clients",
+        project: "Shoptet Pay",
+        role: "Positioning, retention and lifecycle communication for the most used payment gateway on Shoptet.",
+      },
       {
         value: "Since 2025",
-        label: "Most used payment gateway on Shoptet",
+        label: "most used gateway on Shoptet",
         project: "Shoptet Pay",
+        role: "Value narrative in a price-sensitive payment category.",
       },
-      { value: "5,000+", label: "e-shops", project: "Shoptet Balíky" },
+      {
+        value: "5,000+",
+        label: "e-shops",
+        project: "Shoptet Balíky",
+        role: "GTM communication across carriers, markets and service variants.",
+      },
       {
         value: "Hundreds",
         label: "of activations",
         project: "Shoptet Pokladna",
+        role: "Launch, migration communication, customer education and feedback loops.",
       },
       {
         value: "CZK 3M",
-        label: "in a public customer case study",
+        label: "public customer case",
         project: "Shoptet Boost",
+        role: "SME financing framed around inventory, cash flow and growth scenarios.",
       },
     ],
   },
@@ -221,16 +234,29 @@ export const en: PortfolioContent = {
       "Selected public evidence and concise descriptions of supporting work.",
     showMoreLabel: "Show more detail",
     showLessLabel: "Show less detail",
-    nextLabel: "See how I work",
+    deliveredLabel: "What I delivered",
+    nextLabel: "Next: See proof",
+  },
+  floatingNav: {
+    label: "Portfolio sections",
+    items: [
+      { label: "Intro", href: "#top" },
+      { label: "Impact", href: "#impact" },
+      { label: "Cases", href: "#case-studies" },
+      { label: "Proof", href: "#evidence" },
+      { label: "How", href: "#how-i-work" },
+      { label: "Skills", href: "#skills" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
   howIWork: {
-    eyebrow: "03 / How I work",
+    eyebrow: "04 / How I work",
     title: "How I bring strategy to market.",
     intro:
       "Four foundations shape the work. Six steps move it from problem to market.",
     foundationsLabel: "Foundations",
     deliveryLabel: "Delivery loop",
-    nextLabel: "View proof in market",
+    nextLabel: "Next: View skills",
   },
   leadership: {
     eyebrow: "05 / Skills",
@@ -240,13 +266,14 @@ export const en: PortfolioContent = {
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
-    label: "04 / Proof gallery",
+    label: "03 / Proof gallery",
     title: "Proof in the market.",
-    body: "Selected public-facing outputs.",
+    body:
+      "Public outputs from campaigns, video production, customer stories and launch communication.",
     openVideoLabel: "Watch on YouTube",
     videoThumbnailLabel: "video thumbnail",
     featuredLabel: "Featured proof",
-    nextLabel: "View skills",
+    nextLabel: "Next: How I work",
   },
   closing: {
     eyebrow: "06 / The next chapter",

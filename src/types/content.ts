@@ -44,6 +44,7 @@ export type PortfolioContent = {
       value: string;
       label: string;
       project: string;
+      role: string;
     }[];
   };
   profile: {
@@ -89,7 +90,15 @@ export type PortfolioContent = {
     proofIntro: string;
     showMoreLabel: string;
     showLessLabel: string;
+    deliveredLabel: string;
     nextLabel: string;
+  };
+  floatingNav: {
+    label: string;
+    items: {
+      label: string;
+      href: string;
+    }[];
   };
   howIWork: {
     eyebrow: string;
@@ -146,6 +155,7 @@ export type CaseStudy = {
     myRole: string;
     proofImpact: string;
   };
+  delivered?: string[];
   context?: string;
   challenge?: string;
   strategicBet?: string;

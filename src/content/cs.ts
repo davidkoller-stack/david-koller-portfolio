@@ -70,22 +70,35 @@ export const cs: PortfolioContent = {
     intro:
       "Vybrané důkazy z projektů, které jsem pomáhal pozicovat, komunikovat a dostat k zákazníkům.",
     metrics: [
-      { value: "12 000+", label: "klientů", project: "Shoptet Pay" },
+      {
+        value: "12 000+",
+        label: "klientů",
+        project: "Shoptet Pay",
+        role: "Positioning, retence a lifecycle komunikace pro nejpoužívanější platební bránu na Shoptetu.",
+      },
       {
         value: "Od roku 2025",
-        label: "Nejpoužívanější platební brána na Shoptetu",
+        label: "nejpoužívanější brána na Shoptetu",
         project: "Shoptet Pay",
+        role: "Hodnotová argumentace v cenově citlivé kategorii plateb.",
       },
-      { value: "5 000+", label: "e-shopů", project: "Shoptet Balíky" },
+      {
+        value: "5 000+",
+        label: "e-shopů",
+        project: "Shoptet Balíky",
+        role: "GTM komunikace napříč dopravci, trhy a variantami služby.",
+      },
       {
         value: "Stovky",
         label: "aktivací",
         project: "Shoptet Pokladna",
+        role: "Launch, migrační komunikace, edukace zákazníků a práce se zpětnou vazbou.",
       },
       {
         value: "3 mil. Kč",
-        label: "ve veřejné klientské case study",
+        label: "ve veřejné klientské case",
         project: "Shoptet Boost",
+        role: "Financování pro SME zarámované kolem zásob, cash-flow a růstových scénářů.",
       },
     ],
   },
@@ -214,16 +227,29 @@ export const cs: PortfolioContent = {
       "Veřejné důkazy a bezpečné popisy interní práce bez citlivých údajů.",
     showMoreLabel: "Zobrazit více detailů",
     showLessLabel: "Zobrazit méně",
-    nextLabel: "Podívat se, jak pracuji",
+    deliveredLabel: "Co jsem doručil",
+    nextLabel: "Dál: výstupy",
+  },
+  floatingNav: {
+    label: "Sekce portfolia",
+    items: [
+      { label: "Intro", href: "#top" },
+      { label: "Dopad", href: "#impact" },
+      { label: "Studie", href: "#case-studies" },
+      { label: "Výstupy", href: "#evidence" },
+      { label: "Jak pracuji", href: "#how-i-work" },
+      { label: "Skills", href: "#skills" },
+      { label: "Kontakt", href: "#contact" },
+    ],
   },
   howIWork: {
-    eyebrow: "03 / Jak pracuji",
+    eyebrow: "04 / Jak pracuji",
     title: "Jak dostávám strategii na trh.",
     intro:
       "Čtyři základy formují můj přístup. Šest kroků dostává práci od problému na trh.",
     foundationsLabel: "Základy",
     deliveryLabel: "Pracovní cyklus",
-    nextLabel: "Prohlédnout výstupy na trhu",
+    nextLabel: "Dál: Skills",
   },
   leadership: {
     eyebrow: "05 / Skills",
@@ -233,13 +259,14 @@ export const cs: PortfolioContent = {
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
-    label: "04 / Galerie výstupů",
+    label: "03 / Galerie výstupů",
     title: "Výstupy, které došly na trh.",
-    body: "Vybrané veřejné výstupy.",
+    body:
+      "Veřejné výstupy z kampaní, video produkce, zákaznických příběhů a launch komunikace.",
     openVideoLabel: "Přehrát na YouTube",
     videoThumbnailLabel: "náhled videa",
     featuredLabel: "Hlavní výstup",
-    nextLabel: "Prohlédnout Skills",
+    nextLabel: "Dál: jak pracuji",
   },
   closing: {
     eyebrow: "06 / Další kapitola",

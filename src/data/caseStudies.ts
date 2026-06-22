@@ -18,6 +18,14 @@ const enCases: CaseStudy[] = [
       proofImpact:
         "Since 2025, Shoptet Pay has been the most used payment gateway on Shoptet, with 12,000+ clients.",
     },
+    delivered: [
+      "Positioning",
+      "Lifecycle communication",
+      "Retention messaging",
+      "Blog case studies",
+      "Social content",
+      "PPC distribution",
+    ],
     context:
       "The payment gateway market is highly price-sensitive. The easy trap would have been to reduce the conversation to transaction fees and compete only on price.",
     challenge:
@@ -70,6 +78,14 @@ const enCases: CaseStudy[] = [
       proofImpact:
         "In the initial phase after launch, the new Shoptet Pokladna reached hundreds of activated projects.",
     },
+    delivered: [
+      "Launch messaging",
+      "Migration communication",
+      "Webinar",
+      "Admin communication",
+      "Sentiment analysis",
+      "Product feedback loop",
+    ],
     context:
       "The new Shoptet Pokladna launched at a moment when merchants needed clarity around the transition from the previous solution, product expectations and the connection between online and in-person sales.",
     challenge:
@@ -117,6 +133,14 @@ const enCases: CaseStudy[] = [
       proofImpact:
         "Shoptet Balíky is used by more than 5,000 e-shops and works with carriers such as PPL, DPD, Balíkovna, GLS, Packeta and Alza.",
     },
+    delivered: [
+      "Carrier GTM",
+      "CZ/SK communication",
+      "Merchant education",
+      "Product news",
+      "Copy/design briefs",
+      "Internal alignment",
+    ],
     context:
       "Logistics is often treated as operational infrastructure rather than a part of the merchant growth and customer-experience story.",
     challenge:
@@ -161,8 +185,16 @@ const enCases: CaseStudy[] = [
       myRole:
         "I led the marketing side of positioning, segmentation, email communication, landing page, case study, partner coordination, reporting and PPC.",
       proofImpact:
-        "The public Jablečné díly case study shows seven uses of the service, CZK 3 million in total and funds received by the next day.",
+        "Shoptet Boost is SME financing for e-shops. In a public customer case study, Jablečné díly used it seven times, drawing CZK 3M in total.",
     },
+    delivered: [
+      "Segmented email",
+      "Landing page",
+      "Customer case study",
+      "Partner coordination",
+      "PPC",
+      "AI personalization experiment",
+    ],
     context:
       "Financing products require trust, clarity and a clear connection to the situations where additional capital can create business value.",
     challenge:
@@ -212,6 +244,14 @@ const csCases: CaseStudy[] = [
       proofImpact:
         "Shoptet Pay je od roku 2025 nejpoužívanější platební bránou na Shoptetu a využívá ji 12 000+ klientů.",
     },
+    delivered: [
+      "Positioning",
+      "Lifecycle komunikace",
+      "Retenční messaging",
+      "Blogové case studies",
+      "Sociální obsah",
+      "PPC distribuce",
+    ],
     context:
       "Trh platebních bran je výrazně citlivý na cenu. Snadnou cestou by bylo zúžit komunikaci na transakční poplatky a soutěžit jen o nejnižší sazbu.",
     challenge:
@@ -264,6 +304,14 @@ const csCases: CaseStudy[] = [
       proofImpact:
         "V úvodní fázi po spuštění dosáhla nová Shoptet Pokladna stovek aktivovaných projektů.",
     },
+    delivered: [
+      "Launch messaging",
+      "Migrační komunikace",
+      "Webinář",
+      "Komunikace v administraci",
+      "Analýza sentimentu",
+      "Zpětná vazba pro produkt",
+    ],
     context:
       "Nová Shoptet Pokladna přicházela v momentě, kdy obchodníci potřebovali jasně pochopit přechod z původního řešení, očekávání od nového produktu a propojení online a osobního prodeje.",
     challenge:
@@ -311,6 +359,14 @@ const csCases: CaseStudy[] = [
       proofImpact:
         "Shoptet Balíky využívá více než 5 000 e-shopů a služba pracuje s dopravci jako PPL, DPD, Balíkovna, GLS, Zásilkovna nebo Alza.",
     },
+    delivered: [
+      "GTM dopravců",
+      "CZ/SK komunikace",
+      "Edukace obchodníků",
+      "Produktové novinky",
+      "Zadání pro copy/design",
+      "Interní sladění",
+    ],
     context:
       "Logistika bývá vnímána jako provozní infrastruktura, ne jako součást růstu obchodníka a zákaznické zkušenosti.",
     challenge:
@@ -355,8 +411,16 @@ const csCases: CaseStudy[] = [
       myRole:
         "Řídil jsem marketingovou část positioningu, segmentace, e-mailingu, landing page, case study, koordinace s partnerem, reportingu a PPC.",
       proofImpact:
-        "Veřejná case study Jablečné díly ukazuje sedm využití služby, celkem 3 miliony Kč a získání prostředků do druhého dne.",
+        "Shoptet Boost je financování pro e-shopy. Ve veřejné klientské case study Jablečné díly využily službu sedmkrát a celkem čerpaly 3 mil. Kč.",
     },
+    delivered: [
+      "Segmentovaný e-mailing",
+      "Landing page",
+      "Klientská case study",
+      "Koordinace partnera",
+      "PPC",
+      "Experiment s AI personalizací",
+    ],
     context:
       "Finanční produkty potřebují důvěru, srozumitelnost a jasnou vazbu na situace, ve kterých může dodatečný kapitál vytvořit obchodní hodnotu.",
     challenge:
