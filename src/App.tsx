@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigation } from "./components/Navigation";
 import { Hero } from "./components/Hero";
 import { Profile } from "./components/Profile";
@@ -19,6 +19,10 @@ const contentByLanguage = { en, cs };
 function App() {
   const [language, setLanguage] = useState<Language>("en");
   const content = contentByLanguage[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   return (
     <main>
