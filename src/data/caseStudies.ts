@@ -37,8 +37,8 @@ const enCases: CaseStudy[] = [
         items: ["Email journeys", "In-product messaging", "Retention messaging"],
       },
       {
-        title: "Sales & support enablement",
-        items: ["Sales/success arguments", "Customer-care feedback routing"],
+        title: "Commercial & care support",
+        items: ["Commercial arguments", "Customer-care feedback routing"],
       },
       {
         title: "Customer insight loops",
@@ -59,7 +59,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Launching POS through migration and adoption.",
     eyebrow: "Shoptet Pokladna",
     statusLabel: "Hundreds activated",
-    tags: ["Launch", "Adoption", "Messaging", "Stakeholders"],
+    tags: ["LAUNCH", "ADOPTION", "MESSAGING", "STAKEHOLDERS"],
     summary: {
       problemSolved:
         "How to launch a new POS solution during migration and heightened customer sensitivity.",
@@ -88,8 +88,8 @@ const enCases: CaseStudy[] = [
         items: ["Educational content", "Admin communication", "Follow-up messaging"],
       },
       {
-        title: "Service alignment",
-        items: ["Support alignment", "Stakeholder coordination", "Sentiment feedback"],
+        title: "Cross-team coordination",
+        items: ["Support preparation", "Stakeholder coordination", "Feedback loops"],
       },
     ],
     impact: [
@@ -105,7 +105,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Turning logistics into a merchant growth lever.",
     eyebrow: "Shoptet Balíky",
     statusLabel: "5,000+ e-shops",
-    tags: ["GTM", "Education", "Market launches", "Adoption"],
+    tags: ["GTM", "EDUCATION", "MARKET LAUNCHES", "ADOPTION"],
     summary: {
       problemSolved:
         "How to turn a logistics service into a business argument for easier operations and a better customer experience.",
@@ -150,7 +150,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Positioning SME financing as a growth tool.",
     eyebrow: "Shoptet Boost",
     statusLabel: "Public case study",
-    tags: ["Segmentation", "Trust", "Partnerships", "Growth"],
+    tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
         "How to communicate financing as a concrete business opportunity, not a generic loan.",
@@ -302,7 +302,7 @@ const csCases: CaseStudy[] = [
       myRole:
         "Řídil jsem GTM a marketingovou komunikaci napříč dopravci, trhy a variantami služby.",
       proofImpact:
-        "Shoptet Balíky využívá více než 5 000 e-shopů a služba pracuje s dopravci jako PPL, DPD, Balíkovna, GLS, Packeta nebo Alza.",
+        "Shoptet Balíky využívá více než 5 000 e-shopů a služba pracuje s dopravci jako PPL, DPD, Balíkovna, GLS, Zásilkovna nebo Alza.",
     },
     context:
       "Logistika bývá vnímána jako provozní infrastruktura, ne jako součást růstu obchodníka a zákaznické zkušenosti.",

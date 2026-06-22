@@ -127,7 +127,7 @@ export const en: PortfolioContent = {
       {
         number: "04",
         title: "Launch",
-        body: "Deliver campaigns, messaging, content, PR, in-product communication and sales enablement.",
+        body: "Deliver campaigns, messaging, content, PR, in-product communication and commercial support.",
       },
       {
         number: "05",
