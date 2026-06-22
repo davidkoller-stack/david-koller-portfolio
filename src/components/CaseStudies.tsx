@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowDownRight,
   ArrowUpRight,
+  ChevronDown,
   Clock3,
   ExternalLink,
   ShieldCheck,
@@ -199,7 +200,11 @@ function CaseDetail({
   content: PortfolioContent["casesIntro"];
   caseStudy: CaseStudy;
 }) {
+  const [showMore, setShowMore] = useState(false);
   const hasStrategicLines = Boolean(caseStudy.strategicLines?.length);
+  const hasExpandedDetail = Boolean(
+    caseStudy.context || caseStudy.challenge || hasStrategicLines,
+  );
   const hasOrchestration = Boolean(
     caseStudy.orchestrationGroups?.some((group) => group.items.length),
   );
@@ -226,60 +231,85 @@ function CaseDetail({
           </div>
         )}
 
-        {(caseStudy.context || caseStudy.challenge) && (
-          <div className={`grid gap-5 lg:grid-cols-2 ${caseStudy.summary ? "mt-5" : ""}`}>
-            {caseStudy.context && (
-              <CaseBlock
-                number="01"
-                label={content.contextLabel}
-                body={caseStudy.context}
-              />
-            )}
-            {caseStudy.challenge && (
-              <CaseBlock
-                number="02"
-                label={content.challengeLabel}
-                body={caseStudy.challenge}
-              />
-            )}
+        {caseStudy.strategicBet && (
+          <div className="mt-5">
+            <CaseBlock
+              number="03"
+              label={content.strategicBetLabel}
+              body={caseStudy.strategicBet}
+              accent
+            />
           </div>
         )}
 
-        {(caseStudy.strategicBet || hasStrategicLines) && (
-          <div className="mt-5 grid gap-5 lg:grid-cols-12">
-            {caseStudy.strategicBet && (
-              <div className={hasStrategicLines ? "lg:col-span-7" : "lg:col-span-12"}>
-                <CaseBlock
-                  number="03"
-                  label={content.strategicBetLabel}
-                  body={caseStudy.strategicBet}
-                  accent
-                />
-              </div>
-            )}
-            {hasStrategicLines && (
-              <div
-                className={`rounded-2xl border border-ink/15 bg-white p-7 sm:p-8 ${
-                  caseStudy.strategicBet ? "lg:col-span-5" : "lg:col-span-12"
-                }`}
-              >
-                <p className="case-label">{content.strategicLinesLabel}</p>
-                <ol className="mt-5 space-y-5">
-                  {caseStudy.strategicLines?.map((line, index) => (
-                    <li
-                      key={line}
-                      className="flex gap-4 text-base leading-[1.6] text-ink/68"
-                    >
-                      <span className="font-semibold text-ink">
-                        0{index + 1}
-                      </span>
-                      {line}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            )}
-          </div>
+        {hasExpandedDetail && (
+          <>
+            <AnimatePresence initial={false}>
+              {showMore && (
+                <motion.div
+                  id={`${caseStudy.id}-expanded-detail`}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden"
+                >
+                  {(caseStudy.context || caseStudy.challenge) && (
+                    <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                      {caseStudy.context && (
+                        <CaseBlock
+                          number="01"
+                          label={content.contextLabel}
+                          body={caseStudy.context}
+                        />
+                      )}
+                      {caseStudy.challenge && (
+                        <CaseBlock
+                          number="02"
+                          label={content.challengeLabel}
+                          body={caseStudy.challenge}
+                        />
+                      )}
+                    </div>
+                  )}
+
+                  {hasStrategicLines && (
+                    <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-7 sm:p-8">
+                      <p className="case-label">{content.strategicLinesLabel}</p>
+                      <ol className="mt-5 grid gap-5 lg:grid-cols-2">
+                        {caseStudy.strategicLines?.map((line, index) => (
+                          <li
+                            key={line}
+                            className="flex gap-4 text-base leading-[1.6] text-ink/68"
+                          >
+                            <span className="font-semibold text-ink">
+                              0{index + 1}
+                            </span>
+                            {line}
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <button
+              type="button"
+              aria-expanded={showMore}
+              aria-controls={`${caseStudy.id}-expanded-detail`}
+              onClick={() => setShowMore((current) => !current)}
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-3 text-[12px] font-bold uppercase tracking-[0.12em] text-ink transition hover:border-acid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
+            >
+              {showMore ? content.showLessLabel : content.showMoreLabel}
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${showMore ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              />
+            </button>
+          </>
         )}
 
         {hasOrchestration && (

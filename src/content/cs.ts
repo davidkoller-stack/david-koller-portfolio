@@ -37,7 +37,7 @@ export const cs: PortfolioContent = {
     eyebrow: "01 / Profil",
     title: "Nejsem specialista na jeden marketingový kanál.",
     intro:
-      "Moje zkušenost stojí na propojení produktového marketingu, výkonnostní disciplíny, značky a doručování strategických iniciativ. Marketing nevnímám jako sadu izolovaných kanálů, ale jako systém, který má dostat business priority k zákazníkům a proměnit je v adopci, důvěru a růst.",
+      "Moje zkušenost sahá od produktového marketingu přes výkon až ke značce. Díky tomu se nedívám jen optikou jednoho kanálu a pro každý problém hledám správnou páku.",
     cards: [
       {
         number: "01",
@@ -70,26 +70,26 @@ export const cs: PortfolioContent = {
     eyebrow: "02 / Co mě formovalo",
     title: "Od kampaní ke strategické odpovědnosti.",
     intro:
-      "Začínal jsem jako performance specialista, kde bylo nutné číst data, hlídat návratnost a stavět kampaně s jasnou odpovědností vůči výsledku. Postupně jsem se posunul k product marketingu, positioningu a růstu služeb v e-commerce a fintechu. Marketing OS je můj způsob práce: nejdřív měřit, potom pochopit kontext, najít odlišení a propojit týmy kolem směru, který se dá uvést do praxe.",
+      "Začínal jsem ve výkonu, kde jsem se naučil číst data, hlídat návratnost a nést odpovědnost za výsledek. Product marketing, positioning a růst služeb přidaly kontext, odlišení a práci napříč týmy. Z těchto základů vznikl můj Marketing OS.",
     layers: [
       {
         title: "Výkonová disciplína",
-        body: "Kampaně, KPI, mediální rozpočty, analytika, konverzní cesty a vyhodnocování návratnosti.",
+        body: "Kampaně, KPI, rozpočty, analytika, konverzní cesty a návratnost.",
         label: "MĚŘIT",
       },
       {
         title: "Business a fintech kontext",
-        body: "Zkušenost z bankovnictví, acquiringu, plateb, e-commerce a služeb pro podnikatele.",
+        body: "Bankovnictví, platby, e-commerce a služby pro podnikatele.",
         label: "POCHOPIT",
       },
       {
         title: "Značka a kreativní směr",
-        body: "Positioning, messaging, kreativní vedení a výstupy, které pomáhají službám najít jasné místo u zákazníků.",
+        body: "Positioning, messaging a kreativní směr, které dávají službě jasné místo na trhu.",
         label: "ODLIŠIT",
       },
       {
         title: "Strategické iniciativy napříč týmy",
-        body: "Propojování produktu, obchodu, péče o zákazníky, dat, specialistů a agentur při uvádění a rozvoji služeb v ekosystému Shoptetu.",
+        body: "Odpovědnost napříč týmy při uvádění a rozvoji služeb v ekosystému Shoptetu.",
         label: "PROPOJIT",
       },
     ],
@@ -100,37 +100,37 @@ export const cs: PortfolioContent = {
     eyebrow: "03 / Jak pracuji",
     title: "Jak dostávám strategii na trh.",
     intro:
-      "Používám jednoduchý pracovní rytmus: pochopit problém, pojmenovat směr, zapojit správné týmy, spustit komunikaci, měřit dopad a zlepšovat podle reality.",
+      "Jednoduchý pracovní rytmus od nejasné priority ke spuštěné a průběžně zlepšované iniciativě.",
     steps: [
       {
         number: "01",
         title: "Pochopit",
-        body: "Rozkrýt business problém, tlak trhu, bariéry zákazníků a interní omezení.",
+        body: "Vyjasnit problém, bariéru zákazníka a omezení.",
       },
       {
         number: "02",
         title: "Zarámovat",
-        body: "Pojmenovat positioning, příběh, segmenty a argument, na kterém může komunikace stát.",
+        body: "Pojmenovat positioning, publikum a hlavní argument.",
       },
       {
         number: "03",
         title: "Propojit týmy",
-        body: "Spojit kanály, stakeholdery a výstupy do jednoho plánu uvedení na trh.",
+        body: "Sladit vlastníky, kanály a výstupy v jednom plánu.",
       },
       {
         number: "04",
         title: "Spustit",
-        body: "Doručit kampaně, obsah, PR, komunikaci v produktu, e-mailing a podporu obchodu.",
+        body: "Doručit komunikaci pro trh a podporu obchodu.",
       },
       {
         number: "05",
         title: "Měřit",
-        body: "Sledovat adopci, konverze, zapojení, zpětnou vazbu a přínos pro business.",
+        body: "Sledovat adopci, konverze, zpětnou vazbu a obchodní signály.",
       },
       {
         number: "06",
         title: "Zlepšovat",
-        body: "Podle dat a zákaznického insightu upravovat argumenty, kanály i další směr služby.",
+        body: "Podle důkazů upravovat argumenty, kanály a další směr.",
       },
     ],
     loopLabel: "A pak zpět k problému — s lepšími informacemi.",
@@ -139,7 +139,7 @@ export const cs: PortfolioContent = {
     eyebrow: "04 / Vybraná práce",
     title: "Business příběhy, ne galerie kampaní.",
     intro:
-      "Každá případová studie ukazuje jiný typ problému: cenu, adopci, migraci, důvěru, logistiku nebo financování. Důležité není jen to, co šlo ven, ale jaký business problém marketing řešil.",
+      "Čtyři business problémy z plateb, retailu, logistiky a financování.",
     detailLabel: "Otevřít případovou studii",
     selectedLabel: "Vybraná případová studie",
     viewDetailLabel: "Zobrazit detail",
@@ -157,18 +157,20 @@ export const cs: PortfolioContent = {
     proofLabel: "Důkazy a výstupy",
     proofIntro:
       "Veřejné důkazy a bezpečné popisy interní práce bez citlivých údajů.",
+    showMoreLabel: "Zobrazit více detailů",
+    showLessLabel: "Zobrazit méně",
   },
   leadership: {
     eyebrow: "05 / Schopnosti pro vedení marketingu",
     title: "Schopnosti, které se navzájem násobí.",
     intro:
-      "Hodnota není v jednotlivých dovednostech. Spočívá ve schopnosti poznat, kterou z nich zapojit, kdy ji použít a jak ji propojit s konkrétním businessovým cílem.",
+      "Stručný přehled schopností, které používám nejčastěji.",
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
     label: "06 / Vybrané výstupy",
     title: "Když strategie dojde až na trh.",
-    body: "Vybrané veřejné výstupy, které ukazují, jak se produktová komunikace, obsah a exekuce proměňují v reálné marketingové výstupy.",
+    body: "Vybrané veřejné výstupy.",
     openVideoLabel: "Přehrát na YouTube",
     videoThumbnailLabel: "náhled videa",
   },

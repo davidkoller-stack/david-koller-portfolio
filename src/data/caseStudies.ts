@@ -46,10 +46,10 @@ const enCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Contributed to stronger adoption and positioning of Shoptet Pay inside the Shoptet ecosystem.",
+      "Supported stronger adoption of Shoptet Pay across the ecosystem.",
       "Shifted the narrative from transaction-fee comparison to integrated business value.",
-      "Connected acquisition, retention, customer insight and product feedback into one communication system.",
-      "Built lifecycle-based messaging across acquisition, retention and service expansion.",
+      "Turned customer feedback into product and communication insight.",
+      "Built lifecycle messaging for acquisition, retention and service expansion.",
     ],
   },
   {
@@ -93,8 +93,8 @@ const enCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Created a structured communication direction for launch, migration and adoption.",
-      "Connected product messaging, education, support and follow-up communication.",
+      "Reframed migration as a step toward connected online and in-person sales.",
+      "Supported adoption with coordinated education and follow-up communication.",
       "Turned early customer feedback into product insight and follow-up communication.",
     ],
   },
@@ -139,8 +139,8 @@ const enCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Built a growth-oriented narrative around logistics and merchant value.",
-      "Connected market launches, carrier communication and ongoing education.",
+      "Reframed logistics around merchant value and customer experience.",
+      "Supported carrier and market launches with practical merchant education.",
     ],
   },
   {
@@ -184,8 +184,8 @@ const enCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Established a growth-oriented framing for SME financing communication.",
-      "Connected segmentation, partner coordination, education and activation.",
+      "Reframed financing around inventory, cash flow and growth opportunities.",
+      "Used segmentation and education to make financing more relevant.",
     ],
   },
 ];
@@ -236,10 +236,10 @@ const csCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Přispěl k vyšší adopci a silnějšímu postavení Shoptet Pay v ekosystému Shoptetu.",
+      "Podpořil širší adopci Shoptet Pay v ekosystému.",
       "Posunul komunikaci od porovnávání poplatků k hodnotě integrovaného řešení.",
-      "Propojil akvizici, udržení, zákaznický insight a produktovou zpětnou vazbu do jednoho komunikačního systému.",
-      "Vytvořil komunikaci podle fáze zákazníka napříč akvizicí, udržením a rozšířením služby.",
+      "Proměnil zákaznickou zpětnou vazbu v podněty pro produkt a komunikaci.",
+      "Vytvořil lifecycle komunikaci pro akvizici, udržení a rozšíření služby.",
     ],
   },
   {
@@ -283,8 +283,8 @@ const csCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Vytvořil strukturovaný komunikační směr pro uvedení, migraci a adopci.",
-      "Propojil produktové sdělení, edukaci, podporu a následnou komunikaci.",
+      "Přerámoval migraci jako krok k propojení online a osobního prodeje.",
+      "Podpořil adopci koordinovanou edukací a následnou komunikací.",
       "Převedl první zpětnou vazbu do podnětů pro produkt a další komunikaci.",
     ],
   },
@@ -329,8 +329,8 @@ const csCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Postavil růstový příběh logistiky na hodnotě pro obchodníka.",
-      "Propojil vstupy na trhy, komunikaci dopravců a průběžnou edukaci.",
+      "Přerámoval logistiku kolem hodnoty pro obchodníka a jeho zákazníky.",
+      "Podpořil spuštění dopravců a trhů praktickou edukací obchodníků.",
     ],
   },
   {
@@ -374,8 +374,8 @@ const csCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Vytvořil růstový rámec pro komunikaci financování malých a středních firem.",
-      "Propojil segmentaci, koordinaci partnera, edukaci a aktivaci.",
+      "Přerámoval financování kolem zásob, cash-flow a růstových příležitostí.",
+      "Pomocí segmentace a edukace zvýšil relevanci nabídky financování.",
     ],
   },
 ];

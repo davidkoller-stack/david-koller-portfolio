@@ -44,7 +44,7 @@ export const en: PortfolioContent = {
     eyebrow: "01 / Executive profile",
     title: "Built for marketing leadership, not a single-channel box.",
     intro:
-      "My experience connects product marketing, performance discipline, brand and strategic initiative delivery. I see marketing as a system, not a set of isolated channels: one that brings business priorities to customers and turns them into adoption, trust and growth.",
+      "My experience spans product marketing, performance and brand. That range lets me see beyond individual channels and choose the right lever for the problem.",
     cards: [
       {
         number: "01",
@@ -77,26 +77,26 @@ export const en: PortfolioContent = {
     eyebrow: "02 / What built me",
     title: "Built from execution into strategic ownership.",
     intro:
-      "I started in performance marketing, where reading data, protecting return and building accountable campaigns were essential. Over time, I moved into product marketing, positioning and service growth in e-commerce and fintech. My Marketing OS is the way I work: measure first, understand the context, find differentiation and connect teams around a direction that can be brought to market.",
+      "I started in performance, learning to read data, protect return and stay accountable. Product marketing, positioning and service growth then added context, differentiation and cross-team ownership. Those foundations became my Marketing OS.",
     layers: [
       {
         title: "Performance discipline",
-        body: "Campaigns, KPIs, media budgets, analytics, conversion paths and return-on-investment evaluation.",
+        body: "Campaigns, KPIs, budgets, analytics, conversion paths and return.",
         label: "MEASURE",
       },
       {
         title: "Business & fintech context",
-        body: "Experience across banking, acquiring, payments, e-commerce and services for entrepreneurs.",
+        body: "Banking, payments, e-commerce and services for entrepreneurs.",
         label: "UNDERSTAND",
       },
       {
         title: "Brand & creative direction",
-        body: "Positioning, messaging, creative direction and outputs that help services find a clear place with customers.",
+        body: "Positioning, messaging and creative direction that create a clear place in the market.",
         label: "DIFFERENTIATE",
       },
       {
         title: "Strategic initiatives across teams",
-        body: "Connecting product, sales, customer care, data, specialists and agencies when launching and growing services in the Shoptet ecosystem.",
+        body: "Cross-team ownership when launching and growing services in the Shoptet ecosystem.",
         label: "CONNECT",
       },
     ],
@@ -107,37 +107,37 @@ export const en: PortfolioContent = {
     eyebrow: "03 / Operating system",
     title: "How I turn strategy into market impact.",
     intro:
-      "A practical operating loop for turning ambiguous business priorities into market-ready initiatives that can be launched, measured and improved.",
+      "A practical loop for moving from an ambiguous priority to a launched and improving initiative.",
     steps: [
       {
         number: "01",
         title: "Diagnose",
-        body: "Understand the business problem, market pressure, customer barriers and internal constraints.",
+        body: "Clarify the problem, customer barrier and constraints.",
       },
       {
         number: "02",
         title: "Frame",
-        body: "Define positioning, narrative, segments and the value argument that can carry the work.",
+        body: "Define the positioning, audience and value argument.",
       },
       {
         number: "03",
         title: "Orchestrate",
-        body: "Connect channels, teams, stakeholders and assets into one coherent go-to-market system.",
+        body: "Align owners, channels and assets around one plan.",
       },
       {
         number: "04",
         title: "Launch",
-        body: "Deliver campaigns, messaging, content, PR, in-product communication and commercial support.",
+        body: "Deliver the market-facing communication and commercial support.",
       },
       {
         number: "05",
         title: "Measure",
-        body: "Track adoption, conversion, revenue proxies, feedback, engagement and business impact.",
+        body: "Track adoption, conversion, feedback and commercial signals.",
       },
       {
         number: "06",
         title: "Iterate",
-        body: "Use data and customer insight to improve the message, product direction and channel effectiveness.",
+        body: "Use evidence to improve the message, channels and direction.",
       },
     ],
     loopLabel: "Then back to the problem—with better information.",
@@ -146,7 +146,7 @@ export const en: PortfolioContent = {
     eyebrow: "04 / Selected work",
     title: "Business cases, not campaign galleries.",
     intro:
-      "Each case shows the system solving a different business problem—from value and retention to migration, logistics and financing.",
+      "Four business problems across payments, retail, logistics and financing.",
     detailLabel: "Read the case",
     selectedLabel: "Selected case",
     viewDetailLabel: "View detail",
@@ -164,18 +164,20 @@ export const en: PortfolioContent = {
     proofLabel: "Proof & evidence",
     proofIntro:
       "Selected public evidence and concise descriptions of supporting work.",
+    showMoreLabel: "Show more detail",
+    showLessLabel: "Show less detail",
   },
   leadership: {
     eyebrow: "05 / Leadership stack",
     title: "The leadership stack I bring.",
     intro:
-      "The value is not in isolated skills. It is in knowing which capability to activate, when to use it and how to connect it to a specific business goal.",
+      "A compact index of the capabilities I use most often.",
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
     label: "06 / Selected proof",
     title: "Proof that strategy made it to market.",
-    body: "Selected public outputs showing how product communication, content and execution turn into real market-facing assets.",
+    body: "Selected public-facing outputs.",
     openVideoLabel: "Watch on YouTube",
     videoThumbnailLabel: "video thumbnail",
   },

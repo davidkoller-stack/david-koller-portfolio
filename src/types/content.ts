@@ -67,6 +67,8 @@ export type PortfolioContent = {
     impactLabel: string;
     proofLabel: string;
     proofIntro: string;
+    showMoreLabel: string;
+    showLessLabel: string;
   };
   leadership: {
     eyebrow: string;
