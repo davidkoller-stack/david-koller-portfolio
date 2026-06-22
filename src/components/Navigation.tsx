@@ -64,12 +64,14 @@ export function Navigation({
         <div className="flex items-center gap-2">
           <div
             className="hidden items-center rounded-full border border-ink/15 p-1 sm:flex"
+            role="group"
             aria-label={content.languageLabel}
           >
             {(["en", "cs"] as const).map((lang) => (
               <button
                 key={lang}
                 onClick={() => setLanguage(lang)}
+                aria-pressed={language === lang}
                 className={`rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition ${
                   language === lang ? "bg-ink text-white" : "text-ink/40 hover:text-ink"
                 }`}
@@ -89,6 +91,8 @@ export function Navigation({
             onClick={() => setOpen((value) => !value)}
             className="grid h-11 w-11 place-items-center rounded-full border border-ink/15 xl:hidden"
             aria-label={content.toggleMenuLabel}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -98,6 +102,7 @@ export function Navigation({
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -116,11 +121,16 @@ export function Navigation({
               ))}
             </nav>
             <div className="mt-5 flex items-center justify-between">
-              <div className="flex rounded-full border border-ink/15 p-1">
+              <div
+                className="flex rounded-full border border-ink/15 p-1"
+                role="group"
+                aria-label={content.languageLabel}
+              >
                 {(["en", "cs"] as const).map((lang) => (
                   <button
                     key={lang}
                     onClick={() => setLanguage(lang)}
+                    aria-pressed={language === lang}
                     className={`rounded-full px-4 py-2 text-xs font-bold ${
                       language === lang ? "bg-ink text-white" : "text-ink/45"
                     }`}
