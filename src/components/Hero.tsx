@@ -43,7 +43,7 @@ export function Hero({ content }: { content: PortfolioContent["hero"] }) {
             className="flex items-start justify-end lg:col-span-2"
           >
             <a
-              href="#profile"
+              href="#choose-path"
               aria-label={content.scrollLabel}
               className="hidden h-28 w-28 animate-[spin_18s_linear_infinite] place-items-center rounded-full border border-ink/25 transition hover:border-ink hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-ink lg:grid"
             >

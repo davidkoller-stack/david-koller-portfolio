@@ -2,82 +2,148 @@ import { ArrowDownToLine, ArrowUpRight } from "lucide-react";
 import type { PortfolioContent } from "../types/content";
 import type { EvidenceItem } from "../data/evidence";
 import { links } from "../data/links";
-import { Container, Reveal } from "./ui";
+import { ChapterLink, Container, Reveal } from "./ui";
 
-export function EvidencePlaceholder({
+export function ProofGallery({
   content,
   evidence,
 }: {
   content: PortfolioContent["evidencePlaceholder"];
   evidence: EvidenceItem[];
 }) {
+  const visibleEvidence = evidence.filter(
+    (item) =>
+      (item.type === "youtube" && item.url) ||
+      (item.type === "image" && item.imageSrc),
+  );
+  const [featured, ...supporting] = visibleEvidence;
+
+  if (!featured) {
+    return null;
+  }
+
   return (
-    <section id="evidence" className="bg-paper pb-24 sm:pb-32">
+    <section id="evidence" className="section-pad bg-paper">
       <Container>
         <Reveal>
-          <div className="rounded-[2rem] border border-ink/15 bg-white/40 p-8 sm:p-12">
-            <div className="grid gap-8 lg:grid-cols-12">
-              <div className="lg:col-span-7">
-                <p className="case-label">{content.label}</p>
-                <h3 className="mt-4 max-w-3xl font-display text-[clamp(2.2rem,4.5vw,4.5rem)] font-semibold leading-[1] tracking-[-0.045em]">
-                  {content.title}
-                </h3>
-              </div>
-              <p className="max-w-xl self-end text-base leading-[1.65] text-ink/65 lg:col-span-5">
-                {content.body}
-              </p>
+          <div className="grid gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <p className="case-label">{content.label}</p>
+              <h2 className="mt-4 max-w-3xl font-display text-[clamp(2.65rem,5.8vw,5.75rem)] font-semibold leading-[0.98] tracking-[-0.052em]">
+                {content.title}
+              </h2>
             </div>
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {evidence.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={`${item.title} — ${content.openVideoLabel}`}
-                  className="group overflow-hidden rounded-2xl border border-ink/15 bg-white transition hover:-translate-y-1 hover:border-acid hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
-                >
-                  <div className="aspect-video overflow-hidden bg-ink/5">
-                    <img
-                      src={getYouTubeThumbnails(item.url)[0]}
-                      alt={`${item.title} — ${content.videoThumbnailLabel}`}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                      loading="lazy"
-                      onError={(event) => {
-                        const image = event.currentTarget;
-                        const thumbnails = getYouTubeThumbnails(item.url);
-                        const currentIndex = Number(image.dataset.fallbackIndex ?? "0");
-                        const nextIndex = currentIndex + 1;
-
-                        if (nextIndex < thumbnails.length) {
-                          image.dataset.fallbackIndex = String(nextIndex);
-                          image.src = thumbnails[nextIndex];
-                        }
-                      }}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-ink/50">
-                      {item.category}
-                    </span>
-                    <h4 className="mt-4 font-display text-2xl font-semibold leading-tight tracking-[-0.035em]">
-                      {item.title}
-                    </h4>
-                    <p className="mt-3 text-base leading-[1.55] text-ink/62">
-                      {item.subtitle}
-                    </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
-                      {content.openVideoLabel}
-                      <ArrowUpRight size={15} />
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <p className="max-w-xl self-end text-base leading-[1.65] text-ink/65 lg:col-span-5">
+              {content.body}
+            </p>
           </div>
         </Reveal>
+
+        <div className="mt-14 grid gap-4 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
+            <ProofCard
+              item={featured}
+              content={content}
+              featured
+            />
+          </Reveal>
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+            {supporting.map((item, index) => (
+              <Reveal key={item.id} delay={index * 0.05}>
+                <ProofCard item={item} content={content} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 flex justify-end">
+          <ChapterLink href="#skills">{content.nextLabel}</ChapterLink>
+        </div>
       </Container>
     </section>
+  );
+}
+
+function ProofCard({
+  item,
+  content,
+  featured = false,
+}: {
+  item: EvidenceItem;
+  content: PortfolioContent["evidencePlaceholder"];
+  featured?: boolean;
+}) {
+  const imageSources =
+    item.type === "youtube" && item.url
+      ? getYouTubeThumbnails(item.url)
+      : item.imageSrc
+        ? [item.imageSrc]
+        : [];
+  const card = (
+    <>
+      <div className="aspect-video overflow-hidden bg-ink/5">
+        <img
+          src={imageSources[0]}
+          alt={`${item.title} — ${content.videoThumbnailLabel}`}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+          loading="lazy"
+          onError={(event) => {
+            const image = event.currentTarget;
+            const currentIndex = Number(image.dataset.fallbackIndex ?? "0");
+            const nextIndex = currentIndex + 1;
+
+            if (nextIndex < imageSources.length) {
+              image.dataset.fallbackIndex = String(nextIndex);
+              image.src = imageSources[nextIndex];
+            }
+          }}
+        />
+      </div>
+      <div className={featured ? "p-7 sm:p-8" : "p-6"}>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-ink/50">
+            {item.category}
+          </span>
+          {featured && (
+            <span className="rounded-full border border-ink/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-ink/50">
+              {content.featuredLabel}
+            </span>
+          )}
+        </div>
+        <h3
+          className={`mt-4 font-display font-semibold leading-tight tracking-[-0.035em] ${
+            featured ? "text-[clamp(2rem,4vw,3.5rem)]" : "text-2xl"
+          }`}
+        >
+          {item.title}
+        </h3>
+        <p className="mt-3 text-base leading-[1.55] text-ink/62">
+          {item.subtitle}
+        </p>
+        {item.type === "youtube" && (
+          <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
+            {content.openVideoLabel}
+            <ArrowUpRight size={15} />
+          </span>
+        )}
+      </div>
+    </>
+  );
+
+  return item.url ? (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label={`${item.title} — ${content.openVideoLabel}`}
+      className="group block h-full overflow-hidden rounded-2xl border border-ink/15 bg-white transition hover:-translate-y-1 hover:border-acid hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
+    >
+      {card}
+    </a>
+  ) : (
+    <article className="group h-full overflow-hidden rounded-2xl border border-ink/15 bg-white">
+      {card}
+    </article>
   );
 }
 

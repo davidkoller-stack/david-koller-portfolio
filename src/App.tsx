@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "./components/Navigation";
 import { Hero } from "./components/Hero";
-import { Profile } from "./components/Profile";
-import { Foundations } from "./components/Foundations";
-import { OperatingSystem } from "./components/OperatingSystem";
+import { GuidedPath } from "./components/GuidedPath";
+import { BusinessImpact } from "./components/BusinessImpact";
 import { CaseStudies } from "./components/CaseStudies";
+import { HowIWork } from "./components/HowIWork";
 import { Leadership } from "./components/Leadership";
-import { Closing, EvidencePlaceholder } from "./components/Closing";
+import { Closing, ProofGallery } from "./components/Closing";
 import { en } from "./content/en";
 import { cs } from "./content/cs";
 import { caseStudies } from "./data/caseStudies";
@@ -32,15 +32,19 @@ function App() {
         setLanguage={setLanguage}
       />
       <Hero content={content.hero} />
-      <Profile content={content.profile} />
-      <Foundations content={content.foundations} />
-      <OperatingSystem content={content.operatingSystem} />
+      <GuidedPath content={content.guidedPath} />
+      <BusinessImpact content={content.businessImpact} />
       <CaseStudies content={content.casesIntro} cases={caseStudies[language]} />
-      <Leadership content={content.leadership} skills={skills[language]} />
-      <EvidencePlaceholder
+      <HowIWork
+        content={content.howIWork}
+        foundations={content.foundations}
+        operatingSystem={content.operatingSystem}
+      />
+      <ProofGallery
         content={content.evidencePlaceholder}
         evidence={evidence[language]}
       />
+      <Leadership content={content.leadership} skills={skills[language]} />
       <Closing content={content.closing} footer={content.footer} />
     </main>
   );

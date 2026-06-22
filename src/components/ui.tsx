@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import type { PropsWithChildren, ReactNode } from "react";
 
 export function Container({
@@ -77,5 +78,29 @@ export function Pill({ children }: { children: ReactNode }) {
     <span className="inline-flex rounded-full border border-current/25 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.13em]">
       {children}
     </span>
+  );
+}
+
+export function ChapterLink({
+  href,
+  children,
+  light = false,
+}: PropsWithChildren<{ href: string; light?: boolean }>) {
+  return (
+    <a
+      href={href}
+      className={`group inline-flex items-center gap-3 rounded-full border px-5 py-3 text-[12px] font-bold uppercase tracking-[0.12em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 ${
+        light
+          ? "border-white/25 text-white hover:border-acid"
+          : "border-ink/20 text-ink hover:border-acid"
+      }`}
+    >
+      {children}
+      <ArrowRight
+        size={16}
+        className="transition-transform group-hover:translate-x-1"
+        aria-hidden="true"
+      />
+    </a>
   );
 }

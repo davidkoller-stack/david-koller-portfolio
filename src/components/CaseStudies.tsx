@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { useRef, useState } from "react";
 import type { CaseStudy, PortfolioContent } from "../types/content";
-import { Container, Pill, Reveal, SectionHeading } from "./ui";
+import { ChapterLink, Container, Pill, Reveal, SectionHeading } from "./ui";
 
 const DETAIL_ID = "selected-case-detail";
 
@@ -154,7 +154,7 @@ export function CaseStudies({
                     {item.eyebrow}
                   </p>
                   <h3 className="mt-4 max-w-md font-display text-[clamp(1.75rem,2.6vw,2.35rem)] font-semibold leading-[1.08] tracking-[-0.04em]">
-                    {item.shortTitle}
+                    {item.problemLabel}
                   </h3>
                 </div>
 
@@ -187,6 +187,9 @@ export function CaseStudies({
               </button>
             </Reveal>
           ))}
+        </div>
+        <div className="mt-10 flex justify-end">
+          <ChapterLink href="#how-i-work">{content.nextLabel}</ChapterLink>
         </div>
       </Container>
     </section>

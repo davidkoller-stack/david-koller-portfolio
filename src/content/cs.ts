@@ -5,9 +5,10 @@ export const cs: PortfolioContent = {
     brand: "DK",
     role: "Značka & růst",
     items: [
-      { label: "Profil", href: "#profile" },
-      { label: "Marketing OS", href: "#marketing-os" },
-      { label: "Případové studie", href: "#case-studies" },
+      { label: "Intro", href: "#top" },
+      { label: "Studie", href: "#case-studies" },
+      { label: "Výstupy", href: "#evidence" },
+      { label: "Jak pracuji", href: "#how-i-work" },
       { label: "Skills", href: "#skills" },
       { label: "Kontakt", href: "#contact" },
     ],
@@ -31,7 +32,62 @@ export const cs: PortfolioContent = {
     systemLabel: "Marketingový systém / co propojuji",
     systemCenter: "Přínos pro business",
     systemNodes: ["Značka", "Produkt", "Výkon", "Zákazník", "Obchod", "Týmy"],
-    scrollLabel: "Přejít na profil",
+    scrollLabel: "Vybrat cestu portfoliem",
+  },
+  guidedPath: {
+    eyebrow: "Začněte tady",
+    title: "Vyberte, čím chcete začít.",
+    items: [
+      {
+        number: "01",
+        title: "Případové studie",
+        body: "Podívat se na problémy, které jsem pomáhal řešit.",
+        href: "#case-studies",
+      },
+      {
+        number: "02",
+        title: "Výstupy na trhu",
+        body: "Vidět videa, kampaně a veřejné výstupy.",
+        href: "#evidence",
+      },
+      {
+        number: "03",
+        title: "Jak pracuji",
+        body: "Pochopit můj způsob práce.",
+        href: "#how-i-work",
+      },
+      {
+        number: "04",
+        title: "CV / Kontakt",
+        body: "Přejít rovnou k dalšímu kroku.",
+        href: "#contact",
+      },
+    ],
+  },
+  businessImpact: {
+    eyebrow: "01 / Business dopad",
+    title: "Dopad v číslech.",
+    intro:
+      "Vybrané důkazy z projektů, které jsem pomáhal pozicovat, komunikovat a dostat k zákazníkům.",
+    metrics: [
+      { value: "12 000+", label: "klientů", project: "Shoptet Pay" },
+      {
+        value: "Od roku 2025",
+        label: "Nejpoužívanější platební brána na Shoptetu",
+        project: "Shoptet Pay",
+      },
+      { value: "5 000+", label: "e-shopů", project: "Shoptet Balíky" },
+      {
+        value: "Stovky",
+        label: "aktivací",
+        project: "Shoptet Pokladna",
+      },
+      {
+        value: "3 mil. Kč",
+        label: "ve veřejné klientské case study",
+        project: "Shoptet Boost",
+      },
+    ],
   },
   profile: {
     eyebrow: "01 / Profil",
@@ -136,10 +192,9 @@ export const cs: PortfolioContent = {
     loopLabel: "A pak zpět k problému — s lepšími informacemi.",
   },
   casesIntro: {
-    eyebrow: "04 / Vybraná práce",
+    eyebrow: "02 / Case explorer",
     title: "Business příběhy, ne galerie kampaní.",
-    intro:
-      "Čtyři business problémy z plateb, retailu, logistiky a financování.",
+    intro: "Vyberte business problém, který chcete otevřít.",
     detailLabel: "Otevřít případovou studii",
     selectedLabel: "Vybraná případová studie",
     viewDetailLabel: "Zobrazit detail",
@@ -159,23 +214,35 @@ export const cs: PortfolioContent = {
       "Veřejné důkazy a bezpečné popisy interní práce bez citlivých údajů.",
     showMoreLabel: "Zobrazit více detailů",
     showLessLabel: "Zobrazit méně",
+    nextLabel: "Podívat se, jak pracuji",
+  },
+  howIWork: {
+    eyebrow: "03 / Jak pracuji",
+    title: "Jak dostávám strategii na trh.",
+    intro:
+      "Čtyři základy formují můj přístup. Šest kroků dostává práci od problému na trh.",
+    foundationsLabel: "Základy",
+    deliveryLabel: "Pracovní cyklus",
+    nextLabel: "Prohlédnout výstupy na trhu",
   },
   leadership: {
-    eyebrow: "05 / Schopnosti pro vedení marketingu",
+    eyebrow: "05 / Skills",
     title: "Schopnosti, které se navzájem násobí.",
     intro:
       "Stručný přehled schopností, které používám nejčastěji.",
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
-    label: "06 / Vybrané výstupy",
-    title: "Když strategie dojde až na trh.",
+    label: "04 / Galerie výstupů",
+    title: "Výstupy, které došly na trh.",
     body: "Vybrané veřejné výstupy.",
     openVideoLabel: "Přehrát na YouTube",
     videoThumbnailLabel: "náhled videa",
+    featuredLabel: "Hlavní výstup",
+    nextLabel: "Prohlédnout Skills",
   },
   closing: {
-    eyebrow: "07 / Další kapitola",
+    eyebrow: "06 / Další kapitola",
     title: "Nejen marketingová exekuce. Odpovědnost za dopad.",
     body: "Nenajímáte si mě na izolované marketingové úkoly. Získáváte člověka, který dokáže propojit positioning, kanály, týmy, zákaznický insight a výkon tak, aby marketing podporoval konkrétní business cíle.",
     statement:

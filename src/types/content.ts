@@ -26,6 +26,26 @@ export type PortfolioContent = {
     systemNodes: string[];
     scrollLabel: string;
   };
+  guidedPath: {
+    eyebrow: string;
+    title: string;
+    items: {
+      number: string;
+      title: string;
+      body: string;
+      href: string;
+    }[];
+  };
+  businessImpact: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    metrics: {
+      value: string;
+      label: string;
+      project: string;
+    }[];
+  };
   profile: {
     eyebrow: string;
     title: string;
@@ -69,6 +89,15 @@ export type PortfolioContent = {
     proofIntro: string;
     showMoreLabel: string;
     showLessLabel: string;
+    nextLabel: string;
+  };
+  howIWork: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    foundationsLabel: string;
+    deliveryLabel: string;
+    nextLabel: string;
   };
   leadership: {
     eyebrow: string;
@@ -82,6 +111,8 @@ export type PortfolioContent = {
     body: string;
     openVideoLabel: string;
     videoThumbnailLabel: string;
+    featuredLabel: string;
+    nextLabel: string;
   };
   closing: {
     eyebrow: string;
@@ -106,6 +137,7 @@ export type CaseStudy = {
   number: string;
   title: string;
   shortTitle: string;
+  problemLabel: string;
   eyebrow: string;
   statusLabel: string;
   tags: string[];

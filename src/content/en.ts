@@ -5,9 +5,10 @@ export const en: PortfolioContent = {
     brand: "DK",
     role: "Brand & Growth",
     items: [
-      { label: "Profile", href: "#profile" },
-      { label: "Marketing OS", href: "#marketing-os" },
-      { label: "Case Studies", href: "#case-studies" },
+      { label: "Intro", href: "#top" },
+      { label: "Cases", href: "#case-studies" },
+      { label: "Proof", href: "#evidence" },
+      { label: "How I work", href: "#how-i-work" },
       { label: "Skills", href: "#skills" },
       { label: "Contact", href: "#contact" },
     ],
@@ -38,7 +39,62 @@ export const en: PortfolioContent = {
       "Sales",
       "Teams",
     ],
-    scrollLabel: "Scroll to profile",
+    scrollLabel: "Choose a path through the portfolio",
+  },
+  guidedPath: {
+    eyebrow: "Start here",
+    title: "Choose what you want to see first.",
+    items: [
+      {
+        number: "01",
+        title: "Business cases",
+        body: "See the problems I helped solve.",
+        href: "#case-studies",
+      },
+      {
+        number: "02",
+        title: "Proof in market",
+        body: "View videos, campaigns and public outputs.",
+        href: "#evidence",
+      },
+      {
+        number: "03",
+        title: "How I work",
+        body: "Understand my operating system.",
+        href: "#how-i-work",
+      },
+      {
+        number: "04",
+        title: "CV / Contact",
+        body: "Skip to the practical next step.",
+        href: "#contact",
+      },
+    ],
+  },
+  businessImpact: {
+    eyebrow: "01 / Business impact",
+    title: "Business impact at a glance.",
+    intro:
+      "Selected proof around projects I helped position, market and bring to customers.",
+    metrics: [
+      { value: "12,000+", label: "clients", project: "Shoptet Pay" },
+      {
+        value: "Since 2025",
+        label: "Most used payment gateway on Shoptet",
+        project: "Shoptet Pay",
+      },
+      { value: "5,000+", label: "e-shops", project: "Shoptet Balíky" },
+      {
+        value: "Hundreds",
+        label: "of activations",
+        project: "Shoptet Pokladna",
+      },
+      {
+        value: "CZK 3M",
+        label: "in a public customer case study",
+        project: "Shoptet Boost",
+      },
+    ],
   },
   profile: {
     eyebrow: "01 / Executive profile",
@@ -143,10 +199,9 @@ export const en: PortfolioContent = {
     loopLabel: "Then back to the problem—with better information.",
   },
   casesIntro: {
-    eyebrow: "04 / Selected work",
+    eyebrow: "02 / Case explorer",
     title: "Business cases, not campaign galleries.",
-    intro:
-      "Four business problems across payments, retail, logistics and financing.",
+    intro: "Choose the business problem you want to explore.",
     detailLabel: "Read the case",
     selectedLabel: "Selected case",
     viewDetailLabel: "View detail",
@@ -166,23 +221,35 @@ export const en: PortfolioContent = {
       "Selected public evidence and concise descriptions of supporting work.",
     showMoreLabel: "Show more detail",
     showLessLabel: "Show less detail",
+    nextLabel: "See how I work",
+  },
+  howIWork: {
+    eyebrow: "03 / How I work",
+    title: "How I bring strategy to market.",
+    intro:
+      "Four foundations shape the work. Six steps move it from problem to market.",
+    foundationsLabel: "Foundations",
+    deliveryLabel: "Delivery loop",
+    nextLabel: "View proof in market",
   },
   leadership: {
-    eyebrow: "05 / Leadership stack",
+    eyebrow: "05 / Skills",
     title: "The leadership stack I bring.",
     intro:
       "A compact index of the capabilities I use most often.",
     acceleratorLabel: "",
   },
   evidencePlaceholder: {
-    label: "06 / Selected proof",
-    title: "Proof that strategy made it to market.",
+    label: "04 / Proof gallery",
+    title: "Proof in the market.",
     body: "Selected public-facing outputs.",
     openVideoLabel: "Watch on YouTube",
     videoThumbnailLabel: "video thumbnail",
+    featuredLabel: "Featured proof",
+    nextLabel: "View skills",
   },
   closing: {
-    eyebrow: "07 / The next chapter",
+    eyebrow: "06 / The next chapter",
     title: "Not just marketing delivery. Marketing ownership.",
     body: "You do not hire me for isolated marketing tasks. You hire me to turn business opportunities into a marketing system that connects positioning, channels, teams, customer insight and measurable business impact.",
     statement:

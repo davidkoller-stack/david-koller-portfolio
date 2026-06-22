@@ -5,8 +5,9 @@ export type EvidenceItem = {
   title: string;
   subtitle: string;
   category: string;
-  type: "youtube";
-  url: string;
+  type: "youtube" | "image";
+  url?: string;
+  imageSrc?: string;
   description: string;
   status: "public";
 };
