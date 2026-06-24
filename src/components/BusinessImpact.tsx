@@ -20,9 +20,14 @@ export function BusinessImpact({
           {content.metrics.map((metric, index) => (
             <Reveal key={`${metric.project}-${metric.value}`} delay={index * 0.04}>
               <article className="flex min-h-[310px] h-full flex-col justify-between rounded-2xl border border-ink/15 bg-white p-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.13em] text-ink/45">
-                  {metric.project}
-                </p>
+                <div>
+                  <span className="inline-flex rounded-full border border-ink/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-ink/55">
+                    {metric.proofType}
+                  </span>
+                  <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.13em] text-ink/45">
+                    {metric.project}
+                  </p>
+                </div>
                 <div className="mt-10">
                   <p className="font-display text-[clamp(2rem,3.2vw,3rem)] font-semibold leading-[0.95] tracking-[-0.045em]">
                     {metric.value}

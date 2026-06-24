@@ -12,9 +12,12 @@ export function GuidedPath({
       <Container>
         <Reveal>
           <div className="grid gap-7 lg:grid-cols-12 lg:items-end">
-            <p className="section-eyebrow text-ink/45 lg:col-span-3">
-              {content.eyebrow}
-            </p>
+            <div className="lg:col-span-3">
+              <p className="section-eyebrow text-ink/45">{content.eyebrow}</p>
+              <p className="mt-4 max-w-xs text-sm font-semibold leading-relaxed text-ink/70">
+                {content.prompt}
+              </p>
+            </div>
             <h2 className="max-w-4xl font-display text-[clamp(2.5rem,5vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.05em] lg:col-span-8">
               {content.title}
             </h2>

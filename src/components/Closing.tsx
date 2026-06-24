@@ -1,4 +1,10 @@
-import { ArrowDownToLine, ArrowUpRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import {
+  ArrowDownToLine,
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+} from "lucide-react";
 import type { PortfolioContent } from "../types/content";
 import type { EvidenceItem } from "../data/evidence";
 import { links } from "../data/links";
@@ -11,10 +17,12 @@ export function ProofGallery({
   content: PortfolioContent["evidencePlaceholder"];
   evidence: EvidenceItem[];
 }) {
+  const photoEvidence = evidence.filter(
+    (item) => item.type === "image" && item.image,
+  );
   const visibleEvidence = evidence.filter(
     (item) =>
       (item.type === "youtube" && item.url) ||
-      (item.type === "image" && item.image) ||
       (item.type === "link" && item.url),
   );
   const [featured, ...remaining] = visibleEvidence;
@@ -48,6 +56,7 @@ export function ProofGallery({
               item={featured}
               content={content}
               featured
+              galleryItems={photoEvidence}
             />
           </Reveal>
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
@@ -81,11 +90,14 @@ function ProofCard({
   item,
   content,
   featured = false,
+  galleryItems = [],
 }: {
   item: EvidenceItem;
   content: PortfolioContent["evidencePlaceholder"];
   featured?: boolean;
+  galleryItems?: EvidenceItem[];
 }) {
+  const hasGallery = featured && galleryItems.length > 0;
   const imageSources =
     item.type === "youtube" && item.url
       ? getYouTubeThumbnails(item.url)
@@ -158,17 +170,31 @@ function ProofCard({
             )}
           </div>
         )}
-        {item.url && (
-          <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
-            {actionLabel}
-            <ArrowUpRight size={15} />
-          </span>
-        )}
+        {item.url &&
+          (hasGallery ? (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
+            >
+              {actionLabel}
+              <ArrowUpRight size={15} />
+            </a>
+          ) : (
+            <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
+              {actionLabel}
+              <ArrowUpRight size={15} />
+            </span>
+          ))}
       </div>
+      {hasGallery && (
+        <ProofPhotoCarousel items={galleryItems} content={content} />
+      )}
     </>
   );
 
-  return item.url ? (
+  return item.url && !hasGallery ? (
     <a
       href={item.url}
       target="_blank"
@@ -182,6 +208,111 @@ function ProofCard({
     <article className="group h-full overflow-hidden rounded-2xl border border-ink/15 bg-white">
       {card}
     </article>
+  );
+}
+
+function ProofPhotoCarousel({
+  items,
+  content,
+}: {
+  items: EvidenceItem[];
+  content: PortfolioContent["evidencePlaceholder"];
+}) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (items.length < 2 || isPaused) {
+      return undefined;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % items.length);
+    }, 7000);
+
+    return () => window.clearInterval(timer);
+  }, [isPaused, items.length]);
+
+  if (items.length === 0) {
+    return null;
+  }
+
+  const goToPrevious = () => {
+    setActiveIndex((current) => (current - 1 + items.length) % items.length);
+  };
+  const goToNext = () => {
+    setActiveIndex((current) => (current + 1) % items.length);
+  };
+  const activeItem = items[activeIndex];
+
+  return (
+    <div
+      className="border-t border-ink/10 p-4 sm:p-6"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={() => setIsPaused(false)}
+      onTouchStart={(event) => {
+        touchStartX.current = event.touches[0]?.clientX ?? null;
+      }}
+      onTouchEnd={(event) => {
+        if (touchStartX.current === null) {
+          return;
+        }
+
+        const distance =
+          (event.changedTouches[0]?.clientX ?? touchStartX.current) -
+          touchStartX.current;
+        touchStartX.current = null;
+
+        if (Math.abs(distance) < 45) {
+          return;
+        }
+
+        if (distance > 0) {
+          goToPrevious();
+        } else {
+          goToNext();
+        }
+      }}
+    >
+      <div className="relative aspect-video overflow-hidden rounded-xl bg-ink/5">
+        <img
+          key={activeItem.id}
+          src={activeItem.image}
+          alt={activeItem.title}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+        {items.length > 1 && (
+          <div className="absolute inset-x-4 bottom-4 flex items-center justify-between">
+            <button
+              type="button"
+              onClick={goToPrevious}
+              aria-label={content.previousPhotoLabel}
+              className="grid h-10 w-10 place-items-center rounded-full border border-white/25 bg-ink/75 text-white backdrop-blur-sm transition hover:border-acid hover:text-acid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid"
+            >
+              <ArrowLeft size={17} />
+            </button>
+            <span className="rounded-full bg-ink/75 px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] text-white backdrop-blur-sm">
+              {activeIndex + 1} / {items.length}
+            </span>
+            <button
+              type="button"
+              onClick={goToNext}
+              aria-label={content.nextPhotoLabel}
+              className="grid h-10 w-10 place-items-center rounded-full border border-white/25 bg-ink/75 text-white backdrop-blur-sm transition hover:border-acid hover:text-acid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid"
+            >
+              <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+      </div>
+      <p className="mt-3 text-sm font-semibold text-ink/70">
+        {activeItem.title}
+      </p>
+    </div>
   );
 }
 

@@ -36,6 +36,7 @@ export const cs: PortfolioContent = {
   },
   guidedPath: {
     eyebrow: "Začněte tady",
+    prompt: "Máte málo času? Začněte tady.",
     title: "Vyberte, čím chcete začít.",
     items: [
       {
@@ -75,30 +76,35 @@ export const cs: PortfolioContent = {
         label: "klientů",
         project: "Shoptet Pay",
         role: "Positioning, lifecycle a retenční komunikace v období růstu služby.",
+        proofType: "MĚŘÍTKO",
       },
       {
         value: "#1 od 2025",
         label: "nejpoužívanější brána na Shoptetu",
         project: "Shoptet Pay",
         role: "Hodnotová argumentace v cenově citlivé kategorii plateb.",
+        proofType: "POZICE NA TRHU",
       },
       {
         value: "5 000+",
         label: "e-shopů",
         project: "Shoptet Balíky",
         role: "GTM komunikace pro adopci logistické služby napříč dopravci a trhy.",
+        proofType: "MĚŘÍTKO",
       },
       {
         value: "1 000+",
         label: "uživatelů / pokladen",
         project: "Shoptet Pokladna",
         role: "Launch, migrační komunikace, video produkce, webinář a post-launch práce se zpětnou vazbou.",
+        proofType: "DORUČENÍ",
       },
       {
         value: "10+",
         label: "produktových / GTM launchů",
         project: "Napříč službami",
         role: "Launch workstreamy napříč platbami, logistikou, pokladnou a financováním.",
+        proofType: "DORUČENÍ",
       },
     ],
   },
@@ -157,8 +163,8 @@ export const cs: PortfolioContent = {
         label: "ODLIŠIT",
       },
       {
-        title: "Strategické iniciativy napříč týmy",
-        body: "Odpovědnost napříč týmy při uvádění a rozvoji služeb v ekosystému Shoptetu.",
+        title: "Propojování týmů",
+        body: "Slaďuji produkt, obchod, péči, data, kreativní výstupy a externí partnery kolem jednoho směru.",
         label: "PROPOJIT",
       },
     ],
@@ -267,6 +273,8 @@ export const cs: PortfolioContent = {
     openProofLabel: "Otevřít veřejný výstup",
     videoThumbnailLabel: "náhled videa",
     featuredLabel: "Hlavní výstup",
+    previousPhotoLabel: "Předchozí produkční fotografie",
+    nextPhotoLabel: "Další produkční fotografie",
     nextLabel: "Dál: jak pracuji",
   },
   closing: {

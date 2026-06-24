@@ -28,6 +28,7 @@ export type PortfolioContent = {
   };
   guidedPath: {
     eyebrow: string;
+    prompt: string;
     title: string;
     items: {
       number: string;
@@ -45,6 +46,7 @@ export type PortfolioContent = {
       label: string;
       project: string;
       role: string;
+      proofType: string;
     }[];
   };
   profile: {
@@ -122,6 +124,8 @@ export type PortfolioContent = {
     openProofLabel: string;
     videoThumbnailLabel: string;
     featuredLabel: string;
+    previousPhotoLabel: string;
+    nextPhotoLabel: string;
     nextLabel: string;
   };
   closing: {

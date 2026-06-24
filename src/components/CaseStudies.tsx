@@ -70,11 +70,11 @@ export function CaseStudies({
             style={{ scrollMarginTop: "112px" }}
           >
             <div className="lg:col-span-2">
-              <span className="text-[13px] font-semibold text-ink/50">
-                {selectedCase.number}
-              </span>
-              <p className="mt-4 text-[12px] font-bold uppercase tracking-[0.15em] text-ink/50">
+              <p className="text-[12px] font-bold uppercase tracking-[0.15em] text-ink/50">
                 {content.selectedLabel}
+              </p>
+              <p className="mt-4 font-display text-xl font-semibold leading-tight tracking-[-0.03em]">
+                {selectedCase.problemLabel}
               </p>
             </div>
             <div className="lg:col-span-8">
@@ -142,18 +142,15 @@ export function CaseStudies({
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
-                    <span className="text-[13px] font-semibold text-ink/50">
-                      {item.number}
+                    <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-ink/45">
+                      {item.eyebrow}
                     </span>
                     <ArrowUpRight
                       size={20}
                       className="shrink-0 text-ink/30 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-ink"
                     />
                   </div>
-                  <p className="mt-10 text-base font-semibold text-ink/55">
-                    {item.eyebrow}
-                  </p>
-                  <h3 className="mt-4 max-w-md font-display text-[clamp(1.75rem,2.6vw,2.35rem)] font-semibold leading-[1.08] tracking-[-0.04em]">
+                  <h3 className="mt-10 max-w-md font-display text-[clamp(1.9rem,2.8vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.04em]">
                     {item.problemLabel}
                   </h3>
                 </div>
@@ -206,18 +203,23 @@ function CaseDetail({
   const [showMore, setShowMore] = useState(false);
   const hasStrategicLines = Boolean(caseStudy.strategicLines?.length);
   const hasDelivered = Boolean(caseStudy.delivered?.length);
-  const hasExpandedDetail = Boolean(
-    caseStudy.context || caseStudy.challenge || hasStrategicLines,
-  );
   const hasOrchestration = Boolean(
     caseStudy.orchestrationGroups?.some((group) => group.items.length),
   );
   const hasImpact = Boolean(caseStudy.impact?.length);
   const hasProof = Boolean(caseStudy.proofAssets?.length);
+  const hasExpandedDetail = Boolean(
+    caseStudy.context ||
+      caseStudy.challenge ||
+      hasStrategicLines ||
+      hasOrchestration ||
+      hasImpact ||
+      hasProof,
+  );
 
   return (
     <div className="p-7 sm:p-10 lg:p-14">
-        {caseStudy.summary && (
+      {caseStudy.summary && (
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <CaseSummaryItem
               label={content.problemSolvedLabel}
@@ -233,9 +235,9 @@ function CaseDetail({
               className="md:col-span-2 lg:col-span-1"
             />
           </div>
-        )}
+      )}
 
-        {hasDelivered && (
+      {hasDelivered && (
           <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-6 sm:p-7">
             <p className="case-label">{content.deliveredLabel}</p>
             <ul className="mt-5 flex flex-wrap gap-2.5">
@@ -249,20 +251,19 @@ function CaseDetail({
               ))}
             </ul>
           </div>
-        )}
+      )}
 
-        {caseStudy.strategicBet && (
+      {caseStudy.strategicBet && (
           <div className="mt-5">
             <CaseBlock
-              number="03"
               label={content.strategicBetLabel}
               body={caseStudy.strategicBet}
               accent
             />
           </div>
-        )}
+      )}
 
-        {hasExpandedDetail && (
+      {hasExpandedDetail && (
           <>
             <AnimatePresence initial={false}>
               {showMore && (
@@ -278,14 +279,12 @@ function CaseDetail({
                     <div className="mt-5 grid gap-5 lg:grid-cols-2">
                       {caseStudy.context && (
                         <CaseBlock
-                          number="01"
                           label={content.contextLabel}
                           body={caseStudy.context}
                         />
                       )}
                       {caseStudy.challenge && (
                         <CaseBlock
-                          number="02"
                           label={content.challengeLabel}
                           body={caseStudy.challenge}
                         />
@@ -297,18 +296,86 @@ function CaseDetail({
                     <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-7 sm:p-8">
                       <p className="case-label">{content.strategicLinesLabel}</p>
                       <ol className="mt-5 grid gap-5 lg:grid-cols-2">
-                        {caseStudy.strategicLines?.map((line, index) => (
+                        {caseStudy.strategicLines?.map((line) => (
                           <li
                             key={line}
-                            className="flex gap-4 text-base leading-[1.6] text-ink/68"
+                            className="flex gap-3 text-base leading-[1.6] text-ink/68"
                           >
-                            <span className="font-semibold text-ink">
-                              0{index + 1}
-                            </span>
+                            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-acid" aria-hidden="true" />
                             {line}
                           </li>
                         ))}
                       </ol>
+                    </div>
+                  )}
+
+                  {hasOrchestration && (
+                    <div className="mt-5 grid gap-8 rounded-2xl bg-ink p-7 text-white lg:grid-cols-12 lg:p-10">
+                      <div className="lg:col-span-3">
+                        <p className="case-label text-white/60">
+                          {content.orchestrationLabel}
+                        </p>
+                      </div>
+                      <div className="grid gap-3 sm:grid-cols-2 lg:col-span-9">
+                        {caseStudy.orchestrationGroups
+                          ?.filter((group) => group.items.length)
+                          .map((group) => (
+                            <div
+                              key={group.title}
+                              className="rounded-xl border border-white/14 bg-white/[0.035] p-6 transition hover:border-acid/45 hover:bg-white/[0.06]"
+                            >
+                              <h4 className="font-display text-xl font-semibold text-white">
+                                {group.title}
+                              </h4>
+                              <ul className="mt-4 space-y-2">
+                                {group.items.map((item) => (
+                                  <li
+                                    key={item}
+                                    className="text-base leading-relaxed text-white/65"
+                                  >
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {hasImpact && (
+                    <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-7 sm:p-9">
+                      <div className="grid gap-8 lg:grid-cols-12">
+                        <div className="lg:col-span-3">
+                          <p className="case-label">{content.impactLabel}</p>
+                        </div>
+                        <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-9">
+                          {caseStudy.impact?.map((item) => (
+                            <li
+                              key={item}
+                              className="rounded-xl border border-ink/12 bg-paper/55 p-5 text-base leading-[1.6] text-ink/70"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {hasProof && (
+                    <div className="mt-5 rounded-2xl border border-ink/15 bg-paper/60 p-7 sm:p-9">
+                      <div>
+                        <p className="case-label">{content.proofLabel}</p>
+                        <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/62">
+                          {content.proofIntro}
+                        </p>
+                      </div>
+                      <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                        {caseStudy.proofAssets?.map((proof) => (
+                          <ProofCard key={proof.title} proof={proof} />
+                        ))}
+                      </div>
                     </div>
                   )}
                 </motion.div>
@@ -330,80 +397,7 @@ function CaseDetail({
               />
             </button>
           </>
-        )}
-
-        {hasOrchestration && (
-          <div className="mt-5 grid gap-8 rounded-2xl bg-ink p-7 text-white lg:grid-cols-12 lg:p-10">
-            <div className="lg:col-span-3">
-              <p className="case-label text-white/60">
-                04 / {content.orchestrationLabel}
-              </p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2 lg:col-span-9">
-              {caseStudy.orchestrationGroups
-                ?.filter((group) => group.items.length)
-                .map((group, index) => (
-                  <div
-                    key={group.title}
-                    className="rounded-xl border border-white/14 bg-white/[0.035] p-6 transition hover:border-acid/45 hover:bg-white/[0.06]"
-                  >
-                    <span className="text-[11px] font-semibold text-white/38">
-                      0{index + 1}
-                    </span>
-                    <h4 className="mt-4 font-display text-xl font-semibold text-white">
-                      {group.title}
-                    </h4>
-                    <ul className="mt-4 space-y-2">
-                      {group.items.map((item) => (
-                        <li
-                          key={item}
-                          className="text-base leading-relaxed text-white/65"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-            </div>
-          </div>
-        )}
-
-        {hasImpact && (
-          <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-7 sm:p-9">
-            <div className="grid gap-8 lg:grid-cols-12">
-              <div className="lg:col-span-3">
-                <p className="case-label">05 / {content.impactLabel}</p>
-              </div>
-              <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-9">
-                {caseStudy.impact?.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-xl border border-ink/12 bg-paper/55 p-5 text-base leading-[1.6] text-ink/70"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {hasProof && (
-          <div className="mt-5 rounded-2xl border border-ink/15 bg-paper/60 p-7 sm:p-9">
-            <div>
-              <p className="case-label">06 / {content.proofLabel}</p>
-              <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/62">
-                {content.proofIntro}
-              </p>
-            </div>
-            <div className="mt-7 grid gap-4 sm:grid-cols-2">
-              {caseStudy.proofAssets?.map((proof) => (
-                <ProofCard key={proof.title} proof={proof} />
-              ))}
-            </div>
-          </div>
-        )}
+      )}
     </div>
   );
 }
@@ -428,12 +422,10 @@ function CaseSummaryItem({
 }
 
 function CaseBlock({
-  number,
   label,
   body,
   accent = false,
 }: {
-  number: string;
   label: string;
   body: string;
   accent?: boolean;
@@ -444,9 +436,7 @@ function CaseBlock({
         accent ? "border-acid bg-acid" : "border-ink/15 bg-white"
       }`}
     >
-      <p className="case-label">
-        {number} / {label}
-      </p>
+      <p className="case-label">{label}</p>
       <p className="mt-5 max-w-2xl text-base leading-[1.65] text-ink/70">
         {body}
       </p>

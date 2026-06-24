@@ -43,6 +43,7 @@ export const en: PortfolioContent = {
   },
   guidedPath: {
     eyebrow: "Start here",
+    prompt: "Short on time? Start here.",
     title: "Choose what you want to see first.",
     items: [
       {
@@ -82,30 +83,35 @@ export const en: PortfolioContent = {
         label: "clients",
         project: "Shoptet Pay",
         role: "Positioning, lifecycle and retention communication during growth of the service.",
+        proofType: "SCALE",
       },
       {
         value: "#1 since 2025",
         label: "most used gateway on Shoptet",
         project: "Shoptet Pay",
         role: "Value narrative in a price-sensitive payment category.",
+        proofType: "MARKET POSITION",
       },
       {
         value: "5,000+",
         label: "e-shops",
         project: "Shoptet Balíky",
         role: "GTM communication for logistics service adoption across carriers and markets.",
+        proofType: "SCALE",
       },
       {
         value: "1,000+",
         label: "users / cash registers",
         project: "Shoptet Pokladna",
         role: "Launch, migration communication, video production, webinar and post-launch feedback loops.",
+        proofType: "DELIVERY",
       },
       {
         value: "10+",
         label: "product / GTM launches",
         project: "Cross-service delivery",
         role: "Launch workstreams across payments, logistics, POS and SME financing.",
+        proofType: "DELIVERY",
       },
     ],
   },
@@ -164,8 +170,8 @@ export const en: PortfolioContent = {
         label: "DIFFERENTIATE",
       },
       {
-        title: "Strategic initiatives across teams",
-        body: "Cross-team ownership when launching and growing services in the Shoptet ecosystem.",
+        title: "Cross-team delivery",
+        body: "Aligning product, commercial, customer care, data, creative work and external partners around one market direction.",
         label: "CONNECT",
       },
     ],
@@ -274,6 +280,8 @@ export const en: PortfolioContent = {
     openProofLabel: "Open public proof",
     videoThumbnailLabel: "video thumbnail",
     featuredLabel: "Featured proof",
+    previousPhotoLabel: "Previous production photo",
+    nextPhotoLabel: "Next production photo",
     nextLabel: "Next: How I work",
   },
   closing: {
