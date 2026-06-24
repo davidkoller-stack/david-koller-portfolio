@@ -5,7 +5,7 @@ export type EvidenceItem = {
   title: string;
   subtitle: string;
   category: string;
-  type: "youtube" | "image";
+  type: "youtube" | "image" | "link";
   url?: string;
   image?: string;
   role?: string;
@@ -54,6 +54,42 @@ const enEvidence: EvidenceItem[] = [
     role: "Customer story and public-facing production",
     relatedProject: "Customer case study",
   },
+  {
+    id: "pokladna-landing-page",
+    title: "Shoptet Pokladna landing page",
+    subtitle: "Product landing page for a new POS solution.",
+    category: "Product launches",
+    type: "link",
+    url: "https://www.shoptet.cz/shoptet-pokladna/",
+    description: "Public product page supporting the Shoptet Pokladna launch.",
+    status: "public",
+    role: "Launch narrative, structure and product value argumentation.",
+    relatedProject: "Shoptet Pokladna",
+  },
+  {
+    id: "daillo-customer-story",
+    title: "Daillo customer story",
+    subtitle: "Public ecosystem proof for Shoptet Pay and Shoptet Balíky.",
+    category: "Customer case studies",
+    type: "link",
+    url: "https://blog.shoptet.cz/pribeh-daillo/",
+    description: "Public customer story used as ecosystem proof content.",
+    status: "public",
+    role: "Customer story framing and proof content.",
+    relatedProject: "Shoptet Pay · Shoptet Balíky",
+  },
+  {
+    id: "fanda-nhl-customer-story",
+    title: "Fanda-NHL customer story",
+    subtitle: "Public Shoptet Pay proof asset.",
+    category: "Customer case studies",
+    type: "link",
+    url: "https://blog.shoptet.cz/shoptet-pay-fanda-nhl/",
+    description: "Public customer story supporting Shoptet Pay communication.",
+    status: "public",
+    role: "Customer story and Shoptet Pay proof content.",
+    relatedProject: "Shoptet Pay",
+  },
 ];
 
 const csEvidence: EvidenceItem[] = [
@@ -86,6 +122,33 @@ const csEvidence: EvidenceItem[] = [
       "Veřejný video výstup doplňující vrstvu vybraných důkazů v portfoliu.",
     role: "Zákaznický příběh a veřejná produkce",
     relatedProject: "Klientská case study",
+  },
+  {
+    ...enEvidence[3],
+    title: "Landing page Shoptet Pokladny",
+    subtitle: "Produktová landing page pro nové POS řešení.",
+    category: "Produktové launch výstupy",
+    description: "Veřejná produktová stránka podporující launch Shoptet Pokladny.",
+    role: "Launch narativ, struktura a hodnotová argumentace produktu.",
+    relatedProject: "Shoptet Pokladna",
+  },
+  {
+    ...enEvidence[4],
+    title: "Zákaznický příběh Daillo",
+    subtitle: "Veřejný proof pro ekosystém Shoptet Pay a Shoptet Balíky.",
+    category: "Klientské case studies",
+    description: "Veřejný zákaznický příběh použitý jako proof obsah ekosystému.",
+    role: "Zarámování zákaznického příběhu a proof obsah.",
+    relatedProject: "Shoptet Pay · Shoptet Balíky",
+  },
+  {
+    ...enEvidence[5],
+    title: "Zákaznický příběh Fanda-NHL",
+    subtitle: "Veřejný proof výstup pro Shoptet Pay.",
+    category: "Klientské case studies",
+    description: "Veřejný zákaznický příběh podporující komunikaci Shoptet Pay.",
+    role: "Zákaznický příběh a proof obsah pro Shoptet Pay.",
+    relatedProject: "Shoptet Pay",
   },
 ];
 

@@ -119,6 +119,7 @@ export type PortfolioContent = {
     title: string;
     body: string;
     openVideoLabel: string;
+    openProofLabel: string;
     videoThumbnailLabel: string;
     featuredLabel: string;
     nextLabel: string;

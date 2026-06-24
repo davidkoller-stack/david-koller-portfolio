@@ -14,9 +14,12 @@ export function ProofGallery({
   const visibleEvidence = evidence.filter(
     (item) =>
       (item.type === "youtube" && item.url) ||
-      (item.type === "image" && item.image),
+      (item.type === "image" && item.image) ||
+      (item.type === "link" && item.url),
   );
-  const [featured, ...supporting] = visibleEvidence;
+  const [featured, ...remaining] = visibleEvidence;
+  const supporting = remaining.slice(0, 2);
+  const additional = remaining.slice(2);
 
   if (!featured) {
     return null;
@@ -56,6 +59,16 @@ export function ProofGallery({
           </div>
         </div>
 
+        {additional.length > 0 && (
+          <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {additional.map((item, index) => (
+              <Reveal key={item.id} delay={index * 0.04}>
+                <ProofCard item={item} content={content} />
+              </Reveal>
+            ))}
+          </div>
+        )}
+
         <div className="mt-10 flex justify-end">
           <ChapterLink href="#how-i-work">{content.nextLabel}</ChapterLink>
         </div>
@@ -79,26 +92,37 @@ function ProofCard({
       : item.image
         ? [item.image]
         : [];
+  const actionLabel =
+    item.type === "youtube" ? content.openVideoLabel : content.openProofLabel;
   const card = (
     <>
-      <div className="aspect-video overflow-hidden bg-ink/5">
-        <img
-          src={imageSources[0]}
-          alt={`${item.title} — ${content.videoThumbnailLabel}`}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-          loading="lazy"
-          onError={(event) => {
-            const image = event.currentTarget;
-            const currentIndex = Number(image.dataset.fallbackIndex ?? "0");
-            const nextIndex = currentIndex + 1;
+      {imageSources.length > 0 ? (
+        <div className="aspect-video overflow-hidden bg-ink/5">
+          <img
+            src={imageSources[0]}
+            alt={`${item.title} — ${content.videoThumbnailLabel}`}
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+            loading="lazy"
+            onError={(event) => {
+              const image = event.currentTarget;
+              const currentIndex = Number(image.dataset.fallbackIndex ?? "0");
+              const nextIndex = currentIndex + 1;
 
-            if (nextIndex < imageSources.length) {
-              image.dataset.fallbackIndex = String(nextIndex);
-              image.src = imageSources[nextIndex];
-            }
-          }}
-        />
-      </div>
+              if (nextIndex < imageSources.length) {
+                image.dataset.fallbackIndex = String(nextIndex);
+                image.src = imageSources[nextIndex];
+              }
+            }}
+          />
+        </div>
+      ) : (
+        <div className="flex aspect-video items-end justify-between bg-ink p-6 text-white">
+          <span className="max-w-[16rem] font-display text-2xl font-semibold leading-tight tracking-[-0.035em]">
+            {item.relatedProject ?? item.category}
+          </span>
+          <ArrowUpRight size={24} className="text-acid" aria-hidden="true" />
+        </div>
+      )}
       <div className={featured ? "p-7 sm:p-8" : "p-6"}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <span className="text-[11px] font-bold uppercase tracking-[0.13em] text-ink/50">
@@ -134,9 +158,9 @@ function ProofCard({
             )}
           </div>
         )}
-        {item.type === "youtube" && (
+        {item.url && (
           <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-bold">
-            {content.openVideoLabel}
+            {actionLabel}
             <ArrowUpRight size={15} />
           </span>
         )}
@@ -149,7 +173,7 @@ function ProofCard({
       href={item.url}
       target="_blank"
       rel="noreferrer noopener"
-      aria-label={`${item.title} — ${content.openVideoLabel}`}
+      aria-label={`${item.title} — ${actionLabel}`}
       className="group block h-full overflow-hidden rounded-2xl border border-ink/15 bg-white transition hover:-translate-y-1 hover:border-acid hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
     >
       {card}

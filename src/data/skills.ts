@@ -30,7 +30,7 @@ const enSkills: SkillGroup[] = [
     number: "04",
     title: "Performance",
     descriptor: "Accountability through numbers",
-    items: ["Budget ownership", "Paid media", "KPI management", "Analytics"],
+    items: ["Investment accountability", "Paid media", "KPI management", "Analytics"],
   },
   {
     number: "05",
@@ -69,7 +69,7 @@ const csSkills: SkillGroup[] = [
     number: "04",
     title: "Performance",
     descriptor: "Odpovědnost vůči číslům",
-    items: ["Rozpočty", "Placená média", "KPI", "Analytika"],
+    items: ["Odpovědnost za investice", "Placená média", "KPI", "Analytika"],
   },
   {
     number: "05",

@@ -78,13 +78,13 @@ export const en: PortfolioContent = {
       "Selected proof around projects I helped position, market and bring to customers.",
     metrics: [
       {
-        value: "12,000+",
+        value: "10,000+ → 12,000+",
         label: "clients",
         project: "Shoptet Pay",
-        role: "Positioning, retention and lifecycle communication for the most used payment gateway on Shoptet.",
+        role: "Positioning, lifecycle and retention communication during growth of the service.",
       },
       {
-        value: "Since 2025",
+        value: "#1 since 2025",
         label: "most used gateway on Shoptet",
         project: "Shoptet Pay",
         role: "Value narrative in a price-sensitive payment category.",
@@ -93,19 +93,19 @@ export const en: PortfolioContent = {
         value: "5,000+",
         label: "e-shops",
         project: "Shoptet Balíky",
-        role: "GTM communication across carriers, markets and service variants.",
+        role: "GTM communication for logistics service adoption across carriers and markets.",
       },
       {
-        value: "Hundreds",
-        label: "of activations",
+        value: "1,000+",
+        label: "users / cash registers",
         project: "Shoptet Pokladna",
-        role: "Launch, migration communication, customer education and feedback loops.",
+        role: "Launch, migration communication, video production, webinar and post-launch feedback loops.",
       },
       {
-        value: "CZK 3M",
-        label: "public customer case",
-        project: "Shoptet Boost",
-        role: "SME financing framed around inventory, cash flow and growth scenarios.",
+        value: "10+",
+        label: "product / GTM launches",
+        project: "Cross-service delivery",
+        role: "Launch workstreams across payments, logistics, POS and SME financing.",
       },
     ],
   },
@@ -132,7 +132,7 @@ export const en: PortfolioContent = {
         number: "03",
         title: "Performance discipline underneath",
         descriptor: "Keeping marketing accountable to numbers.",
-        body: "My foundation is built on budgets, KPI ownership, analytics, funnels and return on marketing investment.",
+        body: "My foundation is built on KPI ownership, analytics, funnels and return on marketing investment.",
       },
       {
         number: "04",
@@ -150,7 +150,7 @@ export const en: PortfolioContent = {
     layers: [
       {
         title: "Performance discipline",
-        body: "Campaigns, KPIs, budgets, analytics, conversion paths and return.",
+        body: "Campaigns, KPIs, analytics, conversion paths and return.",
         label: "MEASURE",
       },
       {
@@ -271,6 +271,7 @@ export const en: PortfolioContent = {
     body:
       "Public outputs from campaigns, video production, customer stories and launch communication.",
     openVideoLabel: "Watch on YouTube",
+    openProofLabel: "Open public proof",
     videoThumbnailLabel: "video thumbnail",
     featuredLabel: "Featured proof",
     nextLabel: "Next: How I work",

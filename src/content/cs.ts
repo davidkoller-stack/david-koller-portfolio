@@ -71,13 +71,13 @@ export const cs: PortfolioContent = {
       "Vybrané důkazy z projektů, které jsem pomáhal pozicovat, komunikovat a dostat k zákazníkům.",
     metrics: [
       {
-        value: "12 000+",
+        value: "10 000+ → 12 000+",
         label: "klientů",
         project: "Shoptet Pay",
-        role: "Positioning, retence a lifecycle komunikace pro nejpoužívanější platební bránu na Shoptetu.",
+        role: "Positioning, lifecycle a retenční komunikace v období růstu služby.",
       },
       {
-        value: "Od roku 2025",
+        value: "#1 od 2025",
         label: "nejpoužívanější brána na Shoptetu",
         project: "Shoptet Pay",
         role: "Hodnotová argumentace v cenově citlivé kategorii plateb.",
@@ -86,19 +86,19 @@ export const cs: PortfolioContent = {
         value: "5 000+",
         label: "e-shopů",
         project: "Shoptet Balíky",
-        role: "GTM komunikace napříč dopravci, trhy a variantami služby.",
+        role: "GTM komunikace pro adopci logistické služby napříč dopravci a trhy.",
       },
       {
-        value: "Stovky",
-        label: "aktivací",
+        value: "1 000+",
+        label: "uživatelů / pokladen",
         project: "Shoptet Pokladna",
-        role: "Launch, migrační komunikace, edukace zákazníků a práce se zpětnou vazbou.",
+        role: "Launch, migrační komunikace, video produkce, webinář a post-launch práce se zpětnou vazbou.",
       },
       {
-        value: "3 mil. Kč",
-        label: "ve veřejné klientské case",
-        project: "Shoptet Boost",
-        role: "Financování pro SME zarámované kolem zásob, cash-flow a růstových scénářů.",
+        value: "10+",
+        label: "produktových / GTM launchů",
+        project: "Napříč službami",
+        role: "Launch workstreamy napříč platbami, logistikou, pokladnou a financováním.",
       },
     ],
   },
@@ -125,7 +125,7 @@ export const cs: PortfolioContent = {
         number: "03",
         title: "Výkon podložený daty",
         descriptor: "Držím marketing odpovědný vůči číslům.",
-        body: "Vycházím z práce s rozpočty, KPI, analytikou, konverzními cestami a vyhodnocováním návratnosti marketingových investic.",
+        body: "Vycházím z práce s KPI, analytikou, konverzními cestami a vyhodnocováním návratnosti marketingových investic.",
       },
       {
         number: "04",
@@ -143,7 +143,7 @@ export const cs: PortfolioContent = {
     layers: [
       {
         title: "Výkonová disciplína",
-        body: "Kampaně, KPI, rozpočty, analytika, konverzní cesty a návratnost.",
+        body: "Kampaně, KPI, analytika, konverzní cesty a návratnost.",
         label: "MĚŘIT",
       },
       {
@@ -264,6 +264,7 @@ export const cs: PortfolioContent = {
     body:
       "Veřejné výstupy z kampaní, video produkce, zákaznických příběhů a launch komunikace.",
     openVideoLabel: "Přehrát na YouTube",
+    openProofLabel: "Otevřít veřejný výstup",
     videoThumbnailLabel: "náhled videa",
     featuredLabel: "Hlavní výstup",
     nextLabel: "Dál: jak pracuji",
