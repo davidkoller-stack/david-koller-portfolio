@@ -8,7 +8,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Competing on value when the market pushes price.",
     problemLabel: "Price pressure",
     eyebrow: "Shoptet Pay",
-    statusLabel: "10,000+ → 12,000+ clients",
+    statusLabel: "12k+ clients",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
     summary: {
       problemSolved:
@@ -184,7 +184,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Positioning SME financing as a growth tool.",
     problemLabel: "Trust in financing",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Public customer story",
+    statusLabel: "Narrative shift",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
@@ -243,7 +243,7 @@ const csCases: CaseStudy[] = [
     shortTitle: "Jak obhájit hodnotu, když trh tlačí hlavně cenu.",
     problemLabel: "Tlak na cenu",
     eyebrow: "Shoptet Pay",
-    statusLabel: "10 000+ → 12 000+ klientů",
+    statusLabel: "12k+ klientů",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
     summary: {
       problemSolved:
@@ -419,7 +419,7 @@ const csCases: CaseStudy[] = [
     shortTitle: "Jak mluvit o financování jako o příležitosti.",
     problemLabel: "Důvěra ve financování",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Veřejný zákaznický příběh",
+    statusLabel: "Změna narativu",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:

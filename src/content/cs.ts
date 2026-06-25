@@ -72,15 +72,15 @@ export const cs: PortfolioContent = {
       "Vybrané důkazy z projektů, které jsem pomáhal pozicovat, komunikovat a dostat k zákazníkům.",
     metrics: [
       {
-        value: "10k+ → 12k+",
+        value: "12k+",
         label: "klientů",
         project: "SHOPTET PAY",
-        role: "Lifecycle a retenční komunikace v období růstu služby.",
+        role: "Lifecycle a retenční komunikace v období růstu z 10k+ klientů.",
         proofType: "MĚŘÍTKO",
       },
       {
-        value: "#1 od 2025",
-        label: "nejpoužívanější brána na Shoptetu",
+        value: "#1",
+        label: "nejpoužívanější brána na Shoptetu od roku 2025",
         project: "SHOPTET PAY",
         role: "Hodnotová argumentace v cenově citlivé kategorii plateb.",
         proofType: "POZICE NA TRHU",
@@ -213,7 +213,7 @@ export const cs: PortfolioContent = {
   casesIntro: {
     eyebrow: "02 / Projekty",
     title: "Business příběhy, ne galerie kampaní.",
-    intro: "Vyberte business problém, který chcete otevřít.",
+    intro: "Vybrané projekty podle problému, který bylo potřeba řešit.",
     detailLabel: "Otevřít projekt",
     selectedLabel: "Vybraný projekt",
     viewDetailLabel: "Zobrazit detail",

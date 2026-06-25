@@ -181,7 +181,7 @@ export function CaseStudies({
                   </div>
                   <div className="flex items-center justify-between gap-4 border-t border-ink/10 pt-5">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.13em] text-ink/50">
+                      <span className="rounded-full border border-ink/15 bg-paper px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-ink/58">
                         {item.statusLabel}
                       </span>
                       {viewedIds.has(item.id) && (

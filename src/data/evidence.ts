@@ -62,6 +62,8 @@ const enEvidence: EvidenceItem[] = [
     category: "Product launches",
     type: "link",
     url: "https://www.shoptet.cz/shoptet-pokladna/",
+    image: "/assets/proof/shoptet-pokladna-production.jpg",
+    imageFit: "cover",
     description: "Public product page supporting the Shoptet Pokladna launch.",
     status: "public",
     role: "Launch narrative, structure and product value argumentation.",
@@ -112,7 +114,7 @@ const enEvidence: EvidenceItem[] = [
     category: "Campaign creatives",
     type: "image",
     image: "/assets/proof/shoptet-baliky-campaign.jpg",
-    imageFit: "contain",
+    imageFit: "cover",
     description:
       "Public campaign creative communicating the scale of Shoptet Balíky adoption.",
     status: "public",
@@ -126,7 +128,7 @@ const enEvidence: EvidenceItem[] = [
     category: "Campaign creatives",
     type: "image",
     image: "/assets/proof/shoptet-pay-campaign.jpg",
-    imageFit: "contain",
+    imageFit: "cover",
     description:
       "Public campaign creative communicating Shoptet Pay adoption.",
     status: "public",
@@ -160,20 +162,6 @@ const enEvidence: EvidenceItem[] = [
     status: "public",
     role: "Launch narrative, production coordination and product storytelling.",
     relatedProject: "Shoptet Pokladna",
-  },
-  {
-    id: "customer-story-production",
-    title: "Customer story production",
-    subtitle: "A real operating environment turned into public proof content.",
-    category: "Video production",
-    type: "image",
-    image: "/assets/proof/customer-story-production.jpg",
-    imageFit: "cover",
-    description:
-      "Behind-the-scenes image from production in a customer operating environment.",
-    status: "public",
-    role: "Story framing, production coordination and public output.",
-    relatedProject: "Customer story",
   },
 ];
 
@@ -284,16 +272,6 @@ const csEvidence: EvidenceItem[] = [
       "Zákulisní fotografie z produkce pro launch Shoptet Pokladny.",
     role: "Launch narativ, koordinace produkce a produktový storytelling.",
     relatedProject: "Shoptet Pokladna",
-  },
-  {
-    ...enEvidence[11],
-    title: "Produkce zákaznického příběhu",
-    subtitle: "Reálné provozní prostředí převedené do veřejného proof obsahu.",
-    category: "Video produkce",
-    description:
-      "Zákulisní fotografie z produkce v reálném provozním prostředí zákazníka.",
-    role: "Zarámování příběhu, koordinace produkce a veřejný výstup.",
-    relatedProject: "Zákaznický příběh",
   },
 ];
 

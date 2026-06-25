@@ -79,17 +79,17 @@ export const en: PortfolioContent = {
       "Selected proof around projects I helped position, market and bring to customers.",
     metrics: [
       {
-        value: "10k+ → 12k+",
+        value: "12k+",
         label: "clients",
         project: "SHOPTET PAY",
-        role: "Lifecycle and retention communication during service growth.",
+        role: "Lifecycle and retention communication during growth from 10k+ clients.",
         proofType: "SCALE",
       },
       {
-        value: "#1 since 2025",
-        label: "most used gateway on Shoptet",
+        value: "#1",
+        label: "most used gateway on Shoptet since 2025",
         project: "SHOPTET PAY",
-        role: "Value narrative in a price-sensitive category.",
+        role: "Value narrative in a price-sensitive payment category.",
         proofType: "MARKET POSITION",
       },
       {
@@ -220,7 +220,7 @@ export const en: PortfolioContent = {
   casesIntro: {
     eyebrow: "02 / Project explorer",
     title: "Business projects, not campaign galleries.",
-    intro: "Choose the business problem you want to explore.",
+    intro: "Explore selected projects by the business problem behind them.",
     detailLabel: "Open project",
     selectedLabel: "Selected project",
     viewDetailLabel: "View detail",
