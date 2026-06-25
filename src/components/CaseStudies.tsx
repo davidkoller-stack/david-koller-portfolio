@@ -25,10 +25,31 @@ export function CaseStudies({
     () => new Set(cases[0]?.id ? [cases[0].id] : []),
   );
   const featuredCaseRef = useRef<HTMLDivElement>(null);
+  const scrollTimerRef = useRef(0);
 
   const selectedCase =
     cases.find((item) => item.id === selectedId) ?? cases[0];
   const supportingCases = cases.filter((item) => item.id !== selectedCase?.id);
+
+  const scrollToFeatured = () => {
+    window.clearTimeout(scrollTimerRef.current);
+    scrollTimerRef.current = window.setTimeout(() => {
+      const featuredCase = featuredCaseRef.current;
+
+      if (featuredCase) {
+        const stickyHeaderOffset = 112;
+        const targetTop =
+          featuredCase.getBoundingClientRect().top +
+          window.scrollY -
+          stickyHeaderOffset;
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: "smooth",
+        });
+      }
+    }, 120);
+  };
 
   if (!selectedCase) {
     return null;
@@ -46,10 +67,7 @@ export function CaseStudies({
       return next;
     });
     setSelectedId(caseId);
-    featuredCaseRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    scrollToFeatured();
   };
 
   return (
@@ -220,52 +238,57 @@ function CaseDetail({
   return (
     <div className="p-7 sm:p-10 lg:p-14">
       {caseStudy.summary && (
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <CaseSummaryItem
-              label={content.problemSolvedLabel}
-              body={caseStudy.summary.problemSolved}
-            />
-            <CaseSummaryItem
-              label={content.myRoleLabel}
-              body={caseStudy.summary.myRole}
-            />
-            <CaseSummaryItem
-              label={content.proofImpactLabel}
-              body={caseStudy.summary.proofImpact}
-              className="md:col-span-2 lg:col-span-1"
-            />
-          </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <CaseSummaryItem
+            label={content.problemSolvedLabel}
+            body={caseStudy.summary.problemSolved}
+          />
+          <CaseSummaryItem
+            label={content.myRoleLabel}
+            body={caseStudy.summary.myRole}
+          />
+          <CaseSummaryItem
+            label={content.proofImpactLabel}
+            body={caseStudy.summary.proofImpact}
+            className="md:col-span-2 lg:col-span-1"
+          />
+        </div>
       )}
 
       {hasDelivered && (
-          <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-6 sm:p-7">
-            <p className="case-label">{content.deliveredLabel}</p>
-            <ul className="mt-5 flex flex-wrap gap-2.5">
-              {caseStudy.delivered?.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-full border border-ink/18 bg-paper px-4 py-2 text-[12px] font-semibold text-ink/72"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-5 rounded-2xl border border-ink/15 bg-white p-6 sm:p-7">
+          <p className="case-label">{content.deliveredLabel}</p>
+          {caseStudy.deliveredSummary && (
+            <p className="mt-4 max-w-3xl text-base font-medium leading-[1.6] text-ink/72">
+              {caseStudy.deliveredSummary}
+            </p>
+          )}
+          <ul className="mt-5 flex flex-wrap gap-2.5">
+            {caseStudy.delivered?.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-ink/18 bg-paper px-4 py-2 text-[12px] font-semibold text-ink/72"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
 
       {caseStudy.strategicBet && (
-          <div className="mt-5">
-            <CaseBlock
-              label={content.strategicBetLabel}
-              body={caseStudy.strategicBet}
-              accent
-            />
-          </div>
+        <div className="mt-5">
+          <CaseBlock
+            label={content.strategicBetLabel}
+            body={caseStudy.strategicBet}
+            accent
+          />
+        </div>
       )}
 
       {hasExpandedDetail && (
-          <>
-            <AnimatePresence initial={false}>
+        <>
+          <AnimatePresence initial={false}>
               {showMore && (
                 <motion.div
                   id={`${caseStudy.id}-expanded-detail`}
@@ -380,23 +403,23 @@ function CaseDetail({
                   )}
                 </motion.div>
               )}
-            </AnimatePresence>
+          </AnimatePresence>
 
-            <button
-              type="button"
-              aria-expanded={showMore}
-              aria-controls={`${caseStudy.id}-expanded-detail`}
-              onClick={() => setShowMore((current) => !current)}
-              className="mt-5 inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-3 text-[12px] font-bold uppercase tracking-[0.12em] text-ink transition hover:border-acid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
-            >
-              {showMore ? content.showLessLabel : content.showMoreLabel}
-              <ChevronDown
-                size={16}
-                className={`transition-transform ${showMore ? "rotate-180" : ""}`}
-                aria-hidden="true"
-              />
-            </button>
-          </>
+          <button
+            type="button"
+            aria-expanded={showMore}
+            aria-controls={`${caseStudy.id}-expanded-detail`}
+            onClick={() => setShowMore((current) => !current)}
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-3 text-[12px] font-bold uppercase tracking-[0.12em] text-ink transition hover:border-acid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
+          >
+            {showMore ? content.showLessLabel : content.showMoreLabel}
+            <ChevronDown
+              size={16}
+              className={`transition-transform ${showMore ? "rotate-180" : ""}`}
+              aria-hidden="true"
+            />
+          </button>
+        </>
       )}
     </div>
   );

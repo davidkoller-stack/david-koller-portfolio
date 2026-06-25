@@ -282,7 +282,11 @@ function ProofPhotoCarousel({
           key={activeItem.id}
           src={activeItem.image}
           alt={activeItem.title}
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${
+            activeItem.imageFit === "contain"
+              ? "object-contain p-3 sm:p-5"
+              : "object-cover"
+          }`}
           loading="lazy"
         />
         {items.length > 1 && (
@@ -309,9 +313,17 @@ function ProofPhotoCarousel({
           </div>
         )}
       </div>
-      <p className="mt-3 text-sm font-semibold text-ink/70">
-        {activeItem.title}
-      </p>
+      <div className="mt-4 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-5">
+        <div aria-live="polite">
+          <p className="text-sm font-semibold text-ink/78">{activeItem.title}</p>
+          <p className="mt-1 text-sm leading-relaxed text-ink/58">
+            {activeItem.role}
+          </p>
+        </div>
+        <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.12em] text-ink/42">
+          {activeItem.relatedProject}
+        </span>
+      </div>
     </div>
   );
 }

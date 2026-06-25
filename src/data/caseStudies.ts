@@ -22,10 +22,12 @@ const enCases: CaseStudy[] = [
       "Positioning",
       "Lifecycle communication",
       "Retention messaging",
-      "Blog case studies",
+      "Customer stories",
       "Social content",
       "Paid distribution",
     ],
+    deliveredSummary:
+      "Built the communication layer around positioning, lifecycle, retention and public proof.",
     context:
       "The payment gateway market is highly price-sensitive. The easy trap would have been to reduce the conversation to transaction fees and compete only on price.",
     challenge:
@@ -86,6 +88,8 @@ const enCases: CaseStudy[] = [
       "Webinar",
       "Feedback loop",
     ],
+    deliveredSummary:
+      "Connected product value, launch assets, migration communication and post-launch feedback into one market narrative.",
     context:
       "The new Shoptet Pokladna launched at a moment when merchants needed clarity around the transition from the previous solution, product expectations and the connection between online and in-person sales.",
     challenge:
@@ -141,6 +145,8 @@ const enCases: CaseStudy[] = [
       "Copy/design briefs",
       "Cross-team coordination",
     ],
+    deliveredSummary:
+      "Turned carrier and feature launches into clear merchant communication across markets.",
     context:
       "Logistics is often treated as operational infrastructure rather than a part of the merchant growth and customer-experience story.",
     challenge:
@@ -178,24 +184,26 @@ const enCases: CaseStudy[] = [
     shortTitle: "Positioning SME financing as a growth tool.",
     problemLabel: "Trust in financing",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Public case study",
+    statusLabel: "Public customer story",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
         "How to communicate financing as a concrete business opportunity, not a generic loan.",
       myRole:
-        "I led positioning, segmented email communication, landing page, customer case study, Flowpay coordination, PPC and an AI personalization experiment.",
+        "I led positioning, segmented email communication, landing page, customer story, Flowpay coordination, PPC and an AI personalization experiment.",
       proofImpact:
         "Built a clearer growth narrative for SME financing and tested segmented/personalized communication around concrete business use cases.",
     },
     delivered: [
       "Segmented email",
       "Landing page",
-      "Customer case study",
+      "Customer story",
       "Partner coordination",
       "PPC",
-      "AI personalization experiment",
+      "AI personalization",
     ],
+    deliveredSummary:
+      "Reframed SME financing into concrete growth scenarios and tested more relevant activation.",
     context:
       "Shoptet Boost is SME financing for e-shops, with use cases around inventory, seasonality, cash flow, marketing and expansion.",
     challenge:
@@ -249,10 +257,12 @@ const csCases: CaseStudy[] = [
       "Positioning",
       "Lifecycle komunikace",
       "Retenční messaging",
-      "Blogové case studies",
+      "Zákaznické příběhy",
       "Sociální obsah",
       "Placená distribuce",
     ],
+    deliveredSummary:
+      "Postavil jsem komunikační linku kolem positioningu, lifecycle, retence a veřejného proof obsahu.",
     context:
       "Trh platebních bran je výrazně citlivý na cenu. Snadnou cestou by bylo zúžit komunikaci na transakční poplatky a soutěžit jen o nejnižší sazbu.",
     challenge:
@@ -313,6 +323,8 @@ const csCases: CaseStudy[] = [
       "Webinář",
       "Zpětná vazba pro produkt",
     ],
+    deliveredSummary:
+      "Propojil jsem hodnotu produktu, launch výstupy, migrační komunikaci a zpětnou vazbu do jedné komunikační linky.",
     context:
       "Nová Shoptet Pokladna přicházela v momentě, kdy obchodníci potřebovali jasně pochopit přechod z původního řešení, očekávání od nového produktu a propojení online a osobního prodeje.",
     challenge:
@@ -368,6 +380,8 @@ const csCases: CaseStudy[] = [
       "Zadání pro copy/design",
       "Sladění týmů",
     ],
+    deliveredSummary:
+      "Převáděl jsem launche dopravců a funkcí do srozumitelné komunikace pro obchodníky napříč trhy.",
     context:
       "Logistika bývá vnímána jako provozní infrastruktura, ne jako součást růstu obchodníka a zákaznické zkušenosti.",
     challenge:
@@ -405,24 +419,26 @@ const csCases: CaseStudy[] = [
     shortTitle: "Jak mluvit o financování jako o příležitosti.",
     problemLabel: "Důvěra ve financování",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Veřejná case study",
+    statusLabel: "Veřejný zákaznický příběh",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
         "Jak komunikovat financování jako konkrétní business příležitost, ne jako generickou půjčku.",
       myRole:
-        "Řídil jsem positioning, segmentovaný e-mailing, landing page, klientskou case study, koordinaci s Flowpay, PPC a experiment s AI personalizací.",
+        "Řídil jsem positioning, segmentovaný e-mailing, landing page, klientský příběh, koordinaci s Flowpay, PPC a experiment s AI personalizací.",
       proofImpact:
         "Postavil jsem srozumitelnější růstový narativ pro financování e-shopů a testoval segmentovanou/personalizovanou komunikaci podle konkrétních business scénářů.",
     },
     delivered: [
       "Segmentovaný e-mailing",
       "Landing page",
-      "Klientská case study",
+      "Klientský příběh",
       "Koordinace partnera",
       "PPC",
-      "Experiment s AI personalizací",
+      "AI personalizace",
     ],
+    deliveredSummary:
+      "Přerámoval jsem financování e-shopů do konkrétních růstových scénářů a testoval relevantnější aktivaci.",
     context:
       "Shoptet Boost je financování pro e-shopy s využitím pro zásoby, sezónnost, cash-flow, marketing a expanzi.",
     challenge:

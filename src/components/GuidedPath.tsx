@@ -28,25 +28,25 @@ export function GuidedPath({
             <Reveal key={item.href} delay={index * 0.04} className="h-full">
               <a
                 href={item.href}
-                className="group flex h-full min-h-[190px] flex-col justify-between rounded-2xl border border-ink/15 bg-paper p-6 text-ink transition hover:-translate-y-1 hover:border-acid hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
+                className="group grid h-full min-h-[220px] grid-rows-[auto_1fr_auto] rounded-2xl border border-ink/15 bg-paper p-6 text-ink transition hover:-translate-y-1 hover:border-acid hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-[12px] font-semibold text-ink/45">
-                    {item.number}
-                  </span>
-                  <ArrowDownRight
-                    size={18}
-                    className="text-ink/35 transition group-hover:rotate-45 group-hover:text-ink"
-                    aria-hidden="true"
-                  />
-                </div>
-                <div className="mt-8">
+                <span className="text-[12px] font-semibold text-ink/45">
+                  {item.number}
+                </span>
+                <div className="mt-8 self-start">
                   <h3 className="font-display text-2xl font-semibold tracking-[-0.035em]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink/62">
                     {item.body}
                   </p>
+                </div>
+                <div className="mt-7 flex justify-end border-t border-ink/10 pt-4">
+                  <ArrowDownRight
+                    size={18}
+                    className="text-ink/35 transition group-hover:rotate-45 group-hover:text-ink"
+                    aria-hidden="true"
+                  />
                 </div>
               </a>
             </Reveal>

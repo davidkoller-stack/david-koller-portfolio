@@ -8,6 +8,7 @@ export type EvidenceItem = {
   type: "youtube" | "image" | "link";
   url?: string;
   image?: string;
+  imageFit?: "cover" | "contain";
   role?: string;
   relatedProject?: string;
   description: string;
@@ -43,7 +44,7 @@ const enEvidence: EvidenceItem[] = [
   },
   {
     id: "video-shoptet-production-03",
-    title: "Client case study video",
+    title: "Customer story video",
     subtitle: "A video story connecting brand, product and a real customer experience.",
     category: "Video production",
     type: "youtube",
@@ -52,7 +53,7 @@ const enEvidence: EvidenceItem[] = [
       "Public video output supporting the selected proof layer of the portfolio.",
     status: "public",
     role: "Customer story and public-facing production",
-    relatedProject: "Customer case study",
+    relatedProject: "Customer story",
   },
   {
     id: "pokladna-landing-page",
@@ -70,7 +71,7 @@ const enEvidence: EvidenceItem[] = [
     id: "daillo-customer-story",
     title: "Daillo customer story",
     subtitle: "Public ecosystem proof for Shoptet Pay and Shoptet Balíky.",
-    category: "Customer case studies",
+    category: "Customer stories",
     type: "link",
     url: "https://blog.shoptet.cz/pribeh-daillo/",
     description: "Public customer story used as ecosystem proof content.",
@@ -82,13 +83,97 @@ const enEvidence: EvidenceItem[] = [
     id: "fanda-nhl-customer-story",
     title: "Fanda-NHL customer story",
     subtitle: "Public Shoptet Pay proof asset.",
-    category: "Customer case studies",
+    category: "Customer stories",
     type: "link",
     url: "https://blog.shoptet.cz/shoptet-pay-fanda-nhl/",
     description: "Public customer story supporting Shoptet Pay communication.",
     status: "public",
     role: "Customer story and Shoptet Pay proof content.",
     relatedProject: "Shoptet Pay",
+  },
+  {
+    id: "shoptet-pay-event",
+    title: "Shoptet Pay event execution",
+    subtitle: "A public-facing brand and product environment brought to life.",
+    category: "Events",
+    type: "image",
+    image: "/assets/proof/shoptet-pay-event.jpg",
+    imageFit: "cover",
+    description:
+      "Public event setup demonstrating physical delivery of Shoptet Pay communication.",
+    status: "public",
+    role: "Messaging, preparation and public-facing delivery.",
+    relatedProject: "Shoptet Pay",
+  },
+  {
+    id: "shoptet-baliky-campaign",
+    title: "Shoptet Balíky campaign creative",
+    subtitle: "Market-facing creative built around adoption proof.",
+    category: "Campaign creatives",
+    type: "image",
+    image: "/assets/proof/shoptet-baliky-campaign.jpg",
+    imageFit: "contain",
+    description:
+      "Public campaign creative communicating the scale of Shoptet Balíky adoption.",
+    status: "public",
+    role: "Messaging, creative brief and paid distribution.",
+    relatedProject: "Shoptet Balíky",
+  },
+  {
+    id: "shoptet-pay-campaign",
+    title: "Shoptet Pay campaign creative",
+    subtitle: "Public proof translated into a clear campaign message.",
+    category: "Campaign creatives",
+    type: "image",
+    image: "/assets/proof/shoptet-pay-campaign.jpg",
+    imageFit: "contain",
+    description:
+      "Public campaign creative communicating Shoptet Pay adoption.",
+    status: "public",
+    role: "Messaging, creative brief and paid distribution.",
+    relatedProject: "Shoptet Pay",
+  },
+  {
+    id: "production-coordination",
+    title: "Production coordination",
+    subtitle: "Behind-the-scenes delivery of a market-facing content asset.",
+    category: "Video production",
+    type: "image",
+    image: "/assets/proof/production-coordination.jpg",
+    imageFit: "cover",
+    description:
+      "Behind-the-scenes production image showing collaborative content delivery.",
+    status: "public",
+    role: "Production preparation, coordination and public output.",
+    relatedProject: "Shoptet ecosystem",
+  },
+  {
+    id: "shoptet-pokladna-production",
+    title: "Shoptet Pokladna launch production",
+    subtitle: "Product storytelling grounded in a real retail environment.",
+    category: "Product launches",
+    type: "image",
+    image: "/assets/proof/shoptet-pokladna-production.jpg",
+    imageFit: "cover",
+    description:
+      "Behind-the-scenes production for the Shoptet Pokladna launch.",
+    status: "public",
+    role: "Launch narrative, production coordination and product storytelling.",
+    relatedProject: "Shoptet Pokladna",
+  },
+  {
+    id: "customer-story-production",
+    title: "Customer story production",
+    subtitle: "A real operating environment turned into public proof content.",
+    category: "Video production",
+    type: "image",
+    image: "/assets/proof/customer-story-production.jpg",
+    imageFit: "cover",
+    description:
+      "Behind-the-scenes image from production in a customer operating environment.",
+    status: "public",
+    role: "Story framing, production coordination and public output.",
+    relatedProject: "Customer story",
   },
 ];
 
@@ -115,13 +200,13 @@ const csEvidence: EvidenceItem[] = [
   },
   {
     ...enEvidence[2],
-    title: "Klientské case study video",
+    title: "Video zákaznického příběhu",
     subtitle: "Video příběh propojující značku, produkt a reálnou zkušenost klienta.",
     category: "Video produkce",
     description:
       "Veřejný video výstup doplňující vrstvu vybraných důkazů v portfoliu.",
     role: "Zákaznický příběh a veřejná produkce",
-    relatedProject: "Klientská case study",
+    relatedProject: "Zákaznický příběh",
   },
   {
     ...enEvidence[3],
@@ -136,7 +221,7 @@ const csEvidence: EvidenceItem[] = [
     ...enEvidence[4],
     title: "Zákaznický příběh Daillo",
     subtitle: "Veřejný proof pro ekosystém Shoptet Pay a Shoptet Balíky.",
-    category: "Klientské case studies",
+    category: "Zákaznické příběhy",
     description: "Veřejný zákaznický příběh použitý jako proof obsah ekosystému.",
     role: "Zarámování zákaznického příběhu a proof obsah.",
     relatedProject: "Shoptet Pay · Shoptet Balíky",
@@ -145,10 +230,70 @@ const csEvidence: EvidenceItem[] = [
     ...enEvidence[5],
     title: "Zákaznický příběh Fanda-NHL",
     subtitle: "Veřejný proof výstup pro Shoptet Pay.",
-    category: "Klientské case studies",
+    category: "Zákaznické příběhy",
     description: "Veřejný zákaznický příběh podporující komunikaci Shoptet Pay.",
     role: "Zákaznický příběh a proof obsah pro Shoptet Pay.",
     relatedProject: "Shoptet Pay",
+  },
+  {
+    ...enEvidence[6],
+    title: "Event execution Shoptet Pay",
+    subtitle: "Veřejný brandový a produktový prostor převedený do reality.",
+    category: "Eventy",
+    description:
+      "Veřejná eventová instalace dokládající fyzické doručení komunikace Shoptet Pay.",
+    role: "Messaging, příprava a veřejné doručení.",
+    relatedProject: "Shoptet Pay",
+  },
+  {
+    ...enEvidence[7],
+    title: "Reklamní kreativa Shoptet Balíky",
+    subtitle: "Veřejná kreativa postavená na důkazu adopce služby.",
+    category: "Reklamní kreativa",
+    description:
+      "Veřejná reklamní kreativa komunikující rozsah adopce Shoptet Balíků.",
+    role: "Messaging, kreativní zadání a placená distribuce.",
+    relatedProject: "Shoptet Balíky",
+  },
+  {
+    ...enEvidence[8],
+    title: "Reklamní kreativa Shoptet Pay",
+    subtitle: "Veřejný důkaz převedený do jasného kampanového sdělení.",
+    category: "Reklamní kreativa",
+    description:
+      "Veřejná reklamní kreativa komunikující adopci Shoptet Pay.",
+    role: "Messaging, kreativní zadání a placená distribuce.",
+    relatedProject: "Shoptet Pay",
+  },
+  {
+    ...enEvidence[9],
+    title: "Koordinace produkce",
+    subtitle: "Zákulisí doručení obsahu určeného směrem na trh.",
+    category: "Video produkce",
+    description:
+      "Zákulisní fotografie ukazující týmové doručení obsahové produkce.",
+    role: "Příprava produkce, koordinace a veřejný výstup.",
+    relatedProject: "Ekosystém Shoptetu",
+  },
+  {
+    ...enEvidence[10],
+    title: "Launch produkce Shoptet Pokladny",
+    subtitle: "Produktový storytelling zasazený do reálného prostředí prodejny.",
+    category: "Produktové launch výstupy",
+    description:
+      "Zákulisní fotografie z produkce pro launch Shoptet Pokladny.",
+    role: "Launch narativ, koordinace produkce a produktový storytelling.",
+    relatedProject: "Shoptet Pokladna",
+  },
+  {
+    ...enEvidence[11],
+    title: "Produkce zákaznického příběhu",
+    subtitle: "Reálné provozní prostředí převedené do veřejného proof obsahu.",
+    category: "Video produkce",
+    description:
+      "Zákulisní fotografie z produkce v reálném provozním prostředí zákazníka.",
+    role: "Zarámování příběhu, koordinace produkce a veřejný výstup.",
+    relatedProject: "Zákaznický příběh",
   },
 ];
 

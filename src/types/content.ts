@@ -161,6 +161,7 @@ export type CaseStudy = {
     proofImpact: string;
   };
   delivered?: string[];
+  deliveredSummary?: string;
   context?: string;
   challenge?: string;
   strategicBet?: string;
