@@ -72,7 +72,7 @@ export const cs: PortfolioContent = {
       "Vybrané důkazy z projektů, které jsem pomáhal pozicovat, komunikovat a dostat k zákazníkům.",
     metrics: [
       {
-        value: "12k+",
+        value: "12 000+",
         label: "klientů",
         project: "SHOPTET PAY",
         role: "Lifecycle a retenční komunikace v období růstu z 10k+ klientů.",

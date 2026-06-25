@@ -8,7 +8,7 @@ const enCases: CaseStudy[] = [
     shortTitle: "Competing on value when the market pushes price.",
     problemLabel: "Price pressure",
     eyebrow: "Shoptet Pay",
-    statusLabel: "12k+ clients",
+    statusLabel: "12,000+ clients",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
     summary: {
       problemSolved:
@@ -243,7 +243,7 @@ const csCases: CaseStudy[] = [
     shortTitle: "Jak obhájit hodnotu, když trh tlačí hlavně cenu.",
     problemLabel: "Tlak na cenu",
     eyebrow: "Shoptet Pay",
-    statusLabel: "12k+ klientů",
+    statusLabel: "12 000+ klientů",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
     summary: {
       problemSolved:

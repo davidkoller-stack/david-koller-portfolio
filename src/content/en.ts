@@ -79,7 +79,7 @@ export const en: PortfolioContent = {
       "Selected proof around projects I helped position, market and bring to customers.",
     metrics: [
       {
-        value: "12k+",
+        value: "12,000+",
         label: "clients",
         project: "SHOPTET PAY",
         role: "Lifecycle and retention communication during growth from 10k+ clients.",
