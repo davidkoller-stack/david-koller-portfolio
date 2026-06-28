@@ -6,6 +6,7 @@ const enCases: CaseStudy[] = [
     number: "01",
     title: "Competing on value when the market pushes price.",
     shortTitle: "Competing on value when the market pushes price.",
+    problemLabel: "Price pressure",
     eyebrow: "Shoptet Pay",
     statusLabel: "12,000+ clients",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
@@ -15,8 +16,18 @@ const enCases: CaseStudy[] = [
       myRole:
         "I owned positioning, lifecycle communication, retention, GTM and the value narrative across channels.",
       proofImpact:
-        "Since 2025, Shoptet Pay has been the most used payment gateway on Shoptet, with 12,000+ clients.",
+        "The service grew from 10,000+ to 12,000+ clients and has been the most used payment gateway on Shoptet since 2025.",
     },
+    delivered: [
+      "Positioning",
+      "Lifecycle communication",
+      "Retention messaging",
+      "Customer stories",
+      "Social content",
+      "Paid distribution",
+    ],
+    deliveredSummary:
+      "Built the communication layer around positioning, lifecycle, retention and public proof.",
     context:
       "The payment gateway market is highly price-sensitive. The easy trap would have been to reduce the conversation to transaction fees and compete only on price.",
     challenge:
@@ -30,11 +41,11 @@ const enCases: CaseStudy[] = [
     orchestrationGroups: [
       {
         title: "Public-facing assets",
-        items: ["Web & landing pages", "Blog & education", "PPC & paid distribution"],
+        items: ["Web & newsletter", "Customer proof stories", "Social & paid distribution"],
       },
       {
         title: "Lifecycle communication",
-        items: ["Email journeys", "In-product messaging", "Retention messaging"],
+        items: ["Email journeys", "Admin & in-product messaging", "Retention messaging"],
       },
       {
         title: "Commercial & care support",
@@ -46,10 +57,10 @@ const enCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Contributed to stronger adoption and positioning of Shoptet Pay inside the Shoptet ecosystem.",
+      "Supported service growth through positioning, lifecycle and retention communication.",
       "Shifted the narrative from transaction-fee comparison to integrated business value.",
-      "Connected acquisition, retention, customer insight and product feedback into one communication system.",
-      "Built lifecycle-based messaging across acquisition, retention and service expansion.",
+      "Delivered customer stories as public proof content.",
+      "Connected web, newsletter, admin, social and paid communication.",
     ],
   },
   {
@@ -57,17 +68,28 @@ const enCases: CaseStudy[] = [
     number: "02",
     title: "Launching a new POS solution through migration and adoption.",
     shortTitle: "Launching POS through migration and adoption.",
+    problemLabel: "Migration & adoption",
     eyebrow: "Shoptet Pokladna",
-    statusLabel: "Hundreds activated",
+    statusLabel: "1,000+ users",
     tags: ["LAUNCH", "ADOPTION", "MESSAGING", "STAKEHOLDERS"],
     summary: {
       problemSolved:
         "How to launch a new POS solution during migration and heightened customer sensitivity.",
       myRole:
-        "I shaped the marketing strategy, creative concept, segmentation, launch and post-launch communication.",
+        "This was marketing ownership from positioning and landing page work through video production, migration communication, webinar and post-launch feedback loops.",
       proofImpact:
-        "In the initial phase after launch, the new Shoptet Pokladna reached hundreds of activated projects.",
+        "Shoptet Pokladna reached 1,000+ users / cash registers.",
     },
+    delivered: [
+      "Landing page",
+      "Launch messaging",
+      "Migration communication",
+      "Video production",
+      "Webinar",
+      "Feedback loop",
+    ],
+    deliveredSummary:
+      "Connected product value, launch assets, migration communication and post-launch feedback into one market narrative.",
     context:
       "The new Shoptet Pokladna launched at a moment when merchants needed clarity around the transition from the previous solution, product expectations and the connection between online and in-person sales.",
     challenge:
@@ -80,22 +102,22 @@ const enCases: CaseStudy[] = [
     ],
     orchestrationGroups: [
       {
-        title: "Launch communication",
-        items: ["Positioning & messaging", "Segmented communication", "PR timing"],
+        title: "Positioning & launch",
+        items: ["Claim & USP", "Landing page", "Launch messaging"],
       },
       {
-        title: "Merchant education",
-        items: ["Educational content", "Admin communication", "Follow-up messaging"],
+        title: "Migration & education",
+        items: ["Migration communication", "Webinar", "Admin communication"],
       },
       {
-        title: "Cross-team coordination",
-        items: ["Support preparation", "Stakeholder coordination", "Feedback loops"],
+        title: "Production & feedback",
+        items: ["Video production", "Post-launch feedback", "Product feedback loop"],
       },
     ],
     impact: [
-      "Created a structured communication direction for launch, migration and adoption.",
-      "Connected product messaging, education, support and follow-up communication.",
-      "Turned early customer feedback into product insight and follow-up communication.",
+      "Reframed migration as a step toward connected online and in-person sales.",
+      "Owned the marketing line from landing page and launch through education.",
+      "Turned post-launch feedback into product and communication follow-up.",
     ],
   },
   {
@@ -103,6 +125,7 @@ const enCases: CaseStudy[] = [
     number: "03",
     title: "Turning logistics from operations into a merchant growth advantage.",
     shortTitle: "Turning logistics into a merchant growth lever.",
+    problemLabel: "Logistics growth",
     eyebrow: "Shoptet Balíky",
     statusLabel: "5,000+ e-shops",
     tags: ["GTM", "EDUCATION", "MARKET LAUNCHES", "ADOPTION"],
@@ -114,12 +137,22 @@ const enCases: CaseStudy[] = [
       proofImpact:
         "Shoptet Balíky is used by more than 5,000 e-shops and works with carriers such as PPL, DPD, Balíkovna, GLS, Packeta and Alza.",
     },
+    delivered: [
+      "Carrier GTM",
+      "CZ/SK communication",
+      "Merchant education",
+      "Product launches",
+      "Copy/design briefs",
+      "Cross-team coordination",
+    ],
+    deliveredSummary:
+      "Turned carrier and feature launches into clear merchant communication across markets.",
     context:
       "Logistics is often treated as operational infrastructure rather than a part of the merchant growth and customer-experience story.",
     challenge:
       "Make a logistics service relevant beyond operations by showing how simpler shipping and broader delivery options support merchants and their customers.",
     strategicBet:
-      "Reframe Shoptet Balíky from an operational feature into a service that simplifies shipping, expands delivery choice and improves customer experience.",
+      "Turn an operational logistics service into a clear merchant value story and repeatedly bring new carriers, features and service variants to market.",
     strategicLines: [
       "Merchant value: translate logistics features into operational simplicity and practical business benefits.",
       "Market activation: support carrier and market launches with clear education and coordinated communication.",
@@ -131,16 +164,17 @@ const enCases: CaseStudy[] = [
       },
       {
         title: "Launch activation",
-        items: ["Carrier launches", "Market-specific communication", "Email"],
+        items: ["GLS Komplet & DPD CZ/SK", "Alza / AlzaBoxy & PPL updates", "SK launch"],
       },
       {
-        title: "Internal alignment",
-        items: ["Admin communication", "Sales alignment", "Support alignment"],
+        title: "Features & coordination",
+        items: ["Pickup-point widget", "Product news", "Copy/design & team alignment"],
       },
     ],
     impact: [
-      "Built a growth-oriented narrative around logistics and merchant value.",
-      "Connected market launches, carrier communication and ongoing education.",
+      "Reframed logistics around merchant value and customer experience.",
+      "Repeatedly brought carriers, features and service variants to market.",
+      "Supported CZ/SK adoption through product news and merchant education.",
     ],
   },
   {
@@ -148,19 +182,30 @@ const enCases: CaseStudy[] = [
     number: "04",
     title: "Positioning SME financing as a growth tool, not just a loan.",
     shortTitle: "Positioning SME financing as a growth tool.",
+    problemLabel: "Trust in financing",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Public case study",
+    statusLabel: "Narrative shift",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
         "How to communicate financing as a concrete business opportunity, not a generic loan.",
       myRole:
-        "I led the marketing side of positioning, segmentation, email communication, landing page, case study, partner coordination, reporting and PPC.",
+        "I led positioning, segmented email communication, landing page, customer story, Flowpay coordination, PPC and an AI personalization experiment.",
       proofImpact:
-        "The public Jablečné díly case study shows seven uses of the service, CZK 3 million in total and funds received by the next day.",
+        "Built a clearer growth narrative for SME financing and tested segmented/personalized communication around concrete business use cases.",
     },
+    delivered: [
+      "Segmented email",
+      "Landing page",
+      "Customer story",
+      "Partner coordination",
+      "PPC",
+      "AI personalization",
+    ],
+    deliveredSummary:
+      "Reframed SME financing into concrete growth scenarios and tested more relevant activation.",
     context:
-      "Financing products require trust, clarity and a clear connection to the situations where additional capital can create business value.",
+      "Shoptet Boost is SME financing for e-shops, with use cases around inventory, seasonality, cash flow, marketing and expansion.",
     challenge:
       "Help merchants understand when financing makes sense while avoiding generic loan messaging that lacks relevance and differentiation.",
     strategicBet:
@@ -180,12 +225,12 @@ const enCases: CaseStudy[] = [
       },
       {
         title: "Partner coordination",
-        items: ["Partner alignment", "Launch messaging", "Market communication"],
+        items: ["Flowpay alignment", "Launch messaging", "Market communication"],
       },
     ],
     impact: [
-      "Established a growth-oriented framing for SME financing communication.",
-      "Connected segmentation, partner coordination, education and activation.",
+      "Built a clearer growth narrative for SME financing.",
+      "Tested segmented and personalized communication around concrete business scenarios.",
     ],
   },
 ];
@@ -196,6 +241,7 @@ const csCases: CaseStudy[] = [
     number: "01",
     title: "Jak obhájit hodnotu, když trh tlačí hlavně cenu.",
     shortTitle: "Jak obhájit hodnotu, když trh tlačí hlavně cenu.",
+    problemLabel: "Tlak na cenu",
     eyebrow: "Shoptet Pay",
     statusLabel: "12 000+ klientů",
     tags: ["POSITIONING", "RETENTION", "ADOPTION"],
@@ -205,8 +251,18 @@ const csCases: CaseStudy[] = [
       myRole:
         "Vedl jsem positioning, lifecycle komunikaci, retenci, GTM a hodnotovou argumentaci služby napříč kanály.",
       proofImpact:
-        "Shoptet Pay je od roku 2025 nejpoužívanější platební bránou na Shoptetu a využívá ji 12 000+ klientů.",
+        "Služba vyrostla z 10 000+ na 12 000+ klientů a od roku 2025 je nejpoužívanější platební bránou na Shoptetu.",
     },
+    delivered: [
+      "Positioning",
+      "Lifecycle komunikace",
+      "Retenční messaging",
+      "Zákaznické příběhy",
+      "Sociální obsah",
+      "Placená distribuce",
+    ],
+    deliveredSummary:
+      "Postavil jsem komunikační linku kolem positioningu, lifecycle, retence a veřejného proof obsahu.",
     context:
       "Trh platebních bran je výrazně citlivý na cenu. Snadnou cestou by bylo zúžit komunikaci na transakční poplatky a soutěžit jen o nejnižší sazbu.",
     challenge:
@@ -220,11 +276,11 @@ const csCases: CaseStudy[] = [
     orchestrationGroups: [
       {
         title: "Veřejné výstupy",
-        items: ["Web a vstupní stránky", "Blog a edukace", "PPC a placená distribuce"],
+        items: ["Web a newsletter", "Zákaznické proof příběhy", "Sociální obsah a placená distribuce"],
       },
       {
         title: "Komunikace v životním cyklu",
-        items: ["E-mailové scénáře", "Komunikace v administraci", "Komunikace pro udržení"],
+        items: ["E-mailové scénáře", "Admin a IPM komunikace", "Retenční komunikace"],
       },
       {
         title: "Podpora obchodu a péče",
@@ -236,10 +292,10 @@ const csCases: CaseStudy[] = [
       },
     ],
     impact: [
-      "Přispěl k vyšší adopci a silnějšímu postavení Shoptet Pay v ekosystému Shoptetu.",
+      "Podpořil růst služby positioningem, lifecycle a retenční komunikací.",
       "Posunul komunikaci od porovnávání poplatků k hodnotě integrovaného řešení.",
-      "Propojil akvizici, udržení, zákaznický insight a produktovou zpětnou vazbu do jednoho komunikačního systému.",
-      "Vytvořil komunikaci podle fáze zákazníka napříč akvizicí, udržením a rozšířením služby.",
+      "Doručil zákaznické příběhy jako veřejný proof obsah.",
+      "Propojil web, newsletter, administraci, sociální obsah a placenou distribuci.",
     ],
   },
   {
@@ -247,17 +303,28 @@ const csCases: CaseStudy[] = [
     number: "02",
     title: "Jak uvést nové POS řešení v prostředí migrace a nejistoty.",
     shortTitle: "Jak uvést POS řešení během migrace a nejistoty.",
+    problemLabel: "Migrace a adopce",
     eyebrow: "Shoptet Pokladna",
-    statusLabel: "Stovky aktivací",
+    statusLabel: "1 000+ uživatelů",
     tags: ["LAUNCH", "ADOPTION", "MESSAGING", "STAKEHOLDERS"],
     summary: {
       problemSolved:
         "Jak uvést nové POS řešení v době migrace a zvýšené citlivosti zákazníků.",
       myRole:
-        "Nastavoval jsem marketingovou strategii, kreativní koncept, segmentaci, launch i post-launch komunikaci.",
+        "Nešlo jen o oznámení nové služby. Šlo o odpovědnost za marketingovou linku od positioningu a landing page přes video produkci, migrační komunikaci, webinář až po post-launch práci se zpětnou vazbou.",
       proofImpact:
-        "V úvodní fázi po spuštění dosáhla nová Shoptet Pokladna stovek aktivovaných projektů.",
+        "Shoptet Pokladna dosáhla 1 000+ uživatelů / pokladen.",
     },
+    delivered: [
+      "Landing page",
+      "Launch messaging",
+      "Migrační komunikace",
+      "Video produkce",
+      "Webinář",
+      "Zpětná vazba pro produkt",
+    ],
+    deliveredSummary:
+      "Propojil jsem hodnotu produktu, launch výstupy, migrační komunikaci a zpětnou vazbu do jedné komunikační linky.",
     context:
       "Nová Shoptet Pokladna přicházela v momentě, kdy obchodníci potřebovali jasně pochopit přechod z původního řešení, očekávání od nového produktu a propojení online a osobního prodeje.",
     challenge:
@@ -270,22 +337,22 @@ const csCases: CaseStudy[] = [
     ],
     orchestrationGroups: [
       {
-        title: "Komunikace uvedení",
-        items: ["Positioning a sdělení", "Segmentovaná komunikace", "Načasování PR"],
+        title: "Positioning a launch",
+        items: ["Claim a USP", "Landing page", "Launch messaging"],
       },
       {
-        title: "Edukace obchodníků",
-        items: ["Edukační obsah", "Komunikace v administraci", "Následná komunikace"],
+        title: "Migrace a edukace",
+        items: ["Migrační komunikace", "Webinář", "Komunikace v administraci"],
       },
       {
-        title: "Sladění týmů",
-        items: ["Příprava podpory", "Koordinace stakeholderů", "Práce se zpětnou vazbou"],
+        title: "Produkce a zpětná vazba",
+        items: ["Video produkce", "Post-launch feedback", "Zpětná vazba pro produkt"],
       },
     ],
     impact: [
-      "Vytvořil strukturovaný komunikační směr pro uvedení, migraci a adopci.",
-      "Propojil produktové sdělení, edukaci, podporu a následnou komunikaci.",
-      "Převedl první zpětnou vazbu do podnětů pro produkt a další komunikaci.",
+      "Přerámoval migraci jako krok k propojení online a osobního prodeje.",
+      "Řídil marketingovou linku od landing page a launch komunikace po edukaci.",
+      "Převedl post-launch zpětnou vazbu do podnětů pro produkt a komunikaci.",
     ],
   },
   {
@@ -293,6 +360,7 @@ const csCases: CaseStudy[] = [
     number: "03",
     title: "Jak z logistiky udělat růstový argument pro e-shopy.",
     shortTitle: "Jak z logistiky udělat růstový argument pro e-shopy.",
+    problemLabel: "Logistika jako růst",
     eyebrow: "Shoptet Balíky",
     statusLabel: "5 000+ e-shopů",
     tags: ["GTM", "EDUCATION", "MARKET LAUNCHES", "ADOPTION"],
@@ -304,12 +372,22 @@ const csCases: CaseStudy[] = [
       proofImpact:
         "Shoptet Balíky využívá více než 5 000 e-shopů a služba pracuje s dopravci jako PPL, DPD, Balíkovna, GLS, Zásilkovna nebo Alza.",
     },
+    delivered: [
+      "GTM dopravců",
+      "CZ/SK komunikace",
+      "Edukace obchodníků",
+      "Produktové launche",
+      "Zadání pro copy/design",
+      "Sladění týmů",
+    ],
+    deliveredSummary:
+      "Převáděl jsem launche dopravců a funkcí do srozumitelné komunikace pro obchodníky napříč trhy.",
     context:
       "Logistika bývá vnímána jako provozní infrastruktura, ne jako součást růstu obchodníka a zákaznické zkušenosti.",
     challenge:
       "Ukázat význam logistické služby i mimo samotný provoz: jednodušší expedici, širší možnosti doručení a lepší zkušenost obchodníka i jeho zákazníků.",
     strategicBet:
-      "Přerámovat Shoptet Balíky z provozní funkce na službu, která zjednodušuje expedici, rozšiřuje volbu dopravy a zlepšuje zákaznickou zkušenost.",
+      "Z provozní logistické služby udělat srozumitelný obchodní argument pro e-shopy a opakovaně uvádět na trh nové dopravce, funkce a varianty služby.",
     strategicLines: [
       "Hodnota pro obchodníka: převést logistické funkce do jednoduchosti provozu a praktických přínosů pro business.",
       "Aktivace trhu: podpořit spuštění dopravců a vstupy na trhy jasnou edukací a koordinovanou komunikací.",
@@ -321,16 +399,17 @@ const csCases: CaseStudy[] = [
       },
       {
         title: "Podpora spuštění",
-        items: ["Spuštění dopravců", "Komunikace podle trhu", "E-mailing"],
+        items: ["GLS Komplet a DPD CZ/SK", "Alza / AlzaBoxy a PPL novinky", "SK launch"],
       },
       {
-        title: "Interní sladění",
-        items: ["Komunikace v administraci", "Sladění s obchodem", "Sladění s podporou"],
+        title: "Funkce a koordinace",
+        items: ["Widget výdejních míst", "Produktové novinky", "Copy/design a sladění týmů"],
       },
     ],
     impact: [
-      "Postavil růstový příběh logistiky na hodnotě pro obchodníka.",
-      "Propojil vstupy na trhy, komunikaci dopravců a průběžnou edukaci.",
+      "Přerámoval logistiku kolem hodnoty pro obchodníka a jeho zákazníky.",
+      "Opakovaně uváděl na trh dopravce, funkce a varianty služby.",
+      "Podpořil adopci v CZ/SK produktovými novinkami a edukací obchodníků.",
     ],
   },
   {
@@ -338,19 +417,30 @@ const csCases: CaseStudy[] = [
     number: "04",
     title: "Jak mluvit o financování jako o příležitosti, ne jako o dluhu.",
     shortTitle: "Jak mluvit o financování jako o příležitosti.",
+    problemLabel: "Důvěra ve financování",
     eyebrow: "Shoptet Boost",
-    statusLabel: "Veřejná case study",
+    statusLabel: "Změna narativu",
     tags: ["SEGMENTATION", "TRUST", "PARTNERSHIPS", "GROWTH"],
     summary: {
       problemSolved:
         "Jak komunikovat financování jako konkrétní business příležitost, ne jako generickou půjčku.",
       myRole:
-        "Řídil jsem marketingovou část positioningu, segmentace, e-mailingu, landing page, case study, koordinace s partnerem, reportingu a PPC.",
+        "Řídil jsem positioning, segmentovaný e-mailing, landing page, klientský příběh, koordinaci s Flowpay, PPC a experiment s AI personalizací.",
       proofImpact:
-        "Veřejná case study Jablečné díly ukazuje sedm využití služby, celkem 3 miliony Kč a získání prostředků do druhého dne.",
+        "Postavil jsem srozumitelnější růstový narativ pro financování e-shopů a testoval segmentovanou/personalizovanou komunikaci podle konkrétních business scénářů.",
     },
+    delivered: [
+      "Segmentovaný e-mailing",
+      "Landing page",
+      "Klientský příběh",
+      "Koordinace partnera",
+      "PPC",
+      "AI personalizace",
+    ],
+    deliveredSummary:
+      "Přerámoval jsem financování e-shopů do konkrétních růstových scénářů a testoval relevantnější aktivaci.",
     context:
-      "Finanční produkty potřebují důvěru, srozumitelnost a jasnou vazbu na situace, ve kterých může dodatečný kapitál vytvořit obchodní hodnotu.",
+      "Shoptet Boost je financování pro e-shopy s využitím pro zásoby, sezónnost, cash-flow, marketing a expanzi.",
     challenge:
       "Pomoci obchodníkům pochopit, kdy financování dává smysl, a vyhnout se obecné komunikaci půjček bez relevance a odlišení.",
     strategicBet:
@@ -370,12 +460,12 @@ const csCases: CaseStudy[] = [
       },
       {
         title: "Koordinace partnera",
-        items: ["Sladění s partnerem", "Komunikace spuštění", "Komunikace na trhu"],
+        items: ["Sladění s Flowpay", "Komunikace spuštění", "Komunikace na trhu"],
       },
     ],
     impact: [
-      "Vytvořil růstový rámec pro komunikaci financování malých a středních firem.",
-      "Propojil segmentaci, koordinaci partnera, edukaci a aktivaci.",
+      "Postavil srozumitelnější růstový narativ pro financování e-shopů.",
+      "Testoval segmentovanou a personalizovanou komunikaci podle konkrétních business scénářů.",
     ],
   },
 ];

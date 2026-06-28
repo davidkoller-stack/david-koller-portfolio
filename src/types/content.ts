@@ -26,6 +26,29 @@ export type PortfolioContent = {
     systemNodes: string[];
     scrollLabel: string;
   };
+  guidedPath: {
+    eyebrow: string;
+    prompt: string;
+    title: string;
+    items: {
+      number: string;
+      title: string;
+      body: string;
+      href: string;
+    }[];
+  };
+  businessImpact: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    metrics: {
+      value: string;
+      label: string;
+      project: string;
+      role: string;
+      proofType: string;
+    }[];
+  };
   profile: {
     eyebrow: string;
     title: string;
@@ -67,6 +90,25 @@ export type PortfolioContent = {
     impactLabel: string;
     proofLabel: string;
     proofIntro: string;
+    showMoreLabel: string;
+    showLessLabel: string;
+    deliveredLabel: string;
+    nextLabel: string;
+  };
+  floatingNav: {
+    label: string;
+    items: {
+      label: string;
+      href: string;
+    }[];
+  };
+  howIWork: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    foundationsLabel: string;
+    deliveryLabel: string;
+    nextLabel: string;
   };
   leadership: {
     eyebrow: string;
@@ -79,7 +121,12 @@ export type PortfolioContent = {
     title: string;
     body: string;
     openVideoLabel: string;
+    openProofLabel: string;
     videoThumbnailLabel: string;
+    featuredLabel: string;
+    previousPhotoLabel: string;
+    nextPhotoLabel: string;
+    nextLabel: string;
   };
   closing: {
     eyebrow: string;
@@ -104,6 +151,7 @@ export type CaseStudy = {
   number: string;
   title: string;
   shortTitle: string;
+  problemLabel: string;
   eyebrow: string;
   statusLabel: string;
   tags: string[];
@@ -112,6 +160,8 @@ export type CaseStudy = {
     myRole: string;
     proofImpact: string;
   };
+  delivered?: string[];
+  deliveredSummary?: string;
   context?: string;
   challenge?: string;
   strategicBet?: string;
