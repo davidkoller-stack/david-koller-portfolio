@@ -295,7 +295,7 @@ export const en: PortfolioContent = {
     linkedinCta: "Open LinkedIn",
   },
   footer: {
-    location: "Prague, Czechia",
+    location: "Prague, Czech Republic",
     email: "Email",
     linkedin: "LinkedIn",
     cv: "Download CV",
